@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/menuicon_bkg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/forwardedBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_selector"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_button_send"
+                android:drawablePadding="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="42dp"
+                android:paddingTop="8dp"
+                android:text="@string/task_zhuanfa_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#444444" >
+            </TextView>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#efefef" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/editBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_selector"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_button_edit"
+                android:drawablePadding="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="42dp"
+                android:paddingTop="8dp"
+                android:text="@string/task_bianji_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#444444" >
+            </TextView>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#efefef" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_selector"
+            android:drawableLeft="@drawable/ic_button_delete"
+            android:drawablePadding="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="42dp"
+            android:paddingTop="8dp"
+            android:text="@string/task_quxiao_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444444"
+            android:visibility="gone" >
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>

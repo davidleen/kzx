@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00000"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00001"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00002"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00003"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00004"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00005"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00006"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00007"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00008"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00009"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00010"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00011"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00012"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00013"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00014"
+            android:gravity="left" />
+    </item>
+    <item android:duration="50">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/footerloader_2_00015"
+            android:gravity="left" />
+    </item>
+</animation-list>

@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/publicActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar_bg_strategic"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_selector"
+            android:padding="12dp"
+            android:src="@drawable/nav_arrow_back" />
+
+        <TextView
+            android:id="@+id/currentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/medal_send"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/btn_add_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/actionbar_selector"
+            android:drawableLeft="@drawable/ic_kzx_add_medal"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/medal_done_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/personBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grid_selector4"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/kzx_ic_member_award"
+            android:gravity="center"
+            android:text="@string/medal_done_who_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#777" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:orientation="horizontal" >
+
+            <com.android.yijiang.kzx.widget.imageview.CircleImageView
+                android:id="@+id/user_bg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:drawablePadding="6dp"
+                android:drawableRight="@drawable/icon_repeat_untilarrow"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#333" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <GridView
+                android:id="@+id/dateCustomGrid"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:listSelector="@drawable/grid_selector2"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                android:smoothScrollbar="true" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include layout="@layout/kzx_lv_default_fragment" />
+    </FrameLayout>
+
+</LinearLayout>

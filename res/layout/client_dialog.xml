@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_background"
+        android:gravity="left|center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/client_sure_hint"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/theme_normal" />
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="8dp"
+                android:src="@drawable/btn_tag" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#dddddd" />
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="6dp"
+            android:gravity="left|center"
+            android:hint="@string/client_phone_hint"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#777777" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_pay_count"
+            android:drawablePadding="6dp"
+            android:gravity="left|center"
+            android:hint="@string/client_name_hint"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#777777" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#dddddd" />
+
+        <Button
+            android:id="@+id/btnSure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/ok"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/search_colorbg"  />
+    </LinearLayout>
+
+</RelativeLayout>

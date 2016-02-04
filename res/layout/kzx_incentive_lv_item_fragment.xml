@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:id="@+id/actionBtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="16dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:orientation="horizontal" >
+
+        <com.android.yijiang.kzx.widget.imageview.CircleImageView
+            android:id="@+id/user_bg"
+            android:layout_width="@dimen/user_cover_middle_height"
+            android:layout_height="@dimen/user_cover_middle_height"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar_120" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:padding="6dp" >
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/theme_normal" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/medalTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/kzx_ic_member_award_2"
+                    android:drawablePadding="3dp"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#777" />
+
+                <TextView
+                    android:id="@+id/taskLeaderGoodCountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/kzx_ic_member_praise_2"
+                    android:drawablePadding="3dp"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#777" />
+
+                <TextView
+                    android:id="@+id/taskClientGoodCountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/kzx_ic_member_smile_2"
+                    android:drawablePadding="3dp"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#777" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#f3f3f3" />
+
+        <LinearLayout
+            android:id="@+id/addMedal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/grid_selector"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/kzx_ic_member_award" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/medal_done_hint"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#777" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

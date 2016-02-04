@@ -1,0 +1,254 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="left|center"
+        android:paddingBottom="22dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="22dp" >
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="left|center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/task_cycle_done_hint"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#444444" />
+
+            <ImageButton
+                android:id="@+id/closeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_tag" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar"
+        android:background="#CFFFFFFF"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:padding="16dp" >
+
+            <LinearLayout
+                android:id="@+id/dayRadioGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="22dp"
+                android:paddingTop="22dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/kzx_cycle_radio_text_background_action"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/oneDayRadio"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/kzx_cycle_radio_text_left_action"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/task_cycle_done_one_hint"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/drawer_parent_colorbg" />
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/white" />
+
+                    <CheckBox
+                        android:id="@+id/threeDayRadio"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/kzx_cycle_radio_text_action"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/task_cycle_done_three_hint"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/drawer_parent_colorbg" />
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/white" />
+
+                    <CheckBox
+                        android:id="@+id/sevenDayRadio"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/kzx_cycle_radio_text_right_action"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/task_cycle_done_seven_hint"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/drawer_parent_colorbg" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/task_cycle_done_start_hint"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#444444" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/beginDateBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_white"
+                    android:drawablePadding="6dp"
+                    android:gravity="left|center"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="8dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#444" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/beginTimeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/btn_white"
+                    android:drawableLeft="@drawable/icn_events_details_time"
+                    android:drawablePadding="6dp"
+                    android:gravity="left|center"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="8dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#444" >
+                </TextView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/task_cycle_done_end_hint"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#444444" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/endDateBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_white"
+                    android:drawablePadding="6dp"
+                    android:gravity="left|center"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="8dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#444" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/endTimeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/btn_white"
+                    android:drawableLeft="@drawable/icn_events_details_time"
+                    android:drawablePadding="6dp"
+                    android:gravity="left|center"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="8dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#444" >
+                </TextView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSure"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/btn_red"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/ok"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:background="@drawable/search_shadow" />
+
+</RelativeLayout>

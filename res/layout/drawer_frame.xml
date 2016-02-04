@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/default1"
+        android:scaleType="centerCrop" />
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null" />
+
+    <FrameLayout
+        android:id="@+id/topLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/main_folder1"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp" >
+
+            <FrameLayout
+                android:layout_width="@dimen/user_cover_width"
+                android:layout_height="@dimen/user_cover_height" >
+
+                <com.android.yijiang.kzx.widget.imageview.CircleImageView
+                    android:id="@+id/memberIcon"
+                    android:layout_width="@dimen/user_cover_width"
+                    android:layout_height="@dimen/user_cover_height"
+                    android:layout_margin="2dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_avatar_120" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/avatar_bg" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:gravity="left|center"
+                android:orientation="vertical" >
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/memberNameTv" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:ellipsize="end" -->
+                <!-- android:gravity="left|center" -->
+                <!-- android:shadowColor="#ff000000" -->
+                <!-- android:shadowDx="2" -->
+                <!-- android:shadowDy="2" -->
+                <!-- android:shadowRadius="1" -->
+                <!-- android:singleLine="true" -->
+                <!-- android:textAppearance="?android:attr/textAppearanceLarge" -->
+                <!-- android:textColor="@color/white" /> -->
+
+                <EditText
+                    android:id="@+id/memberNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:imeOptions="actionDone"
+                    android:padding="5dp"
+                    android:shadowColor="#ff000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/medalCountTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/medal_light"
+                        android:drawablePadding="6dp"
+                        android:ellipsize="end"
+                        android:enabled="false"
+                        android:gravity="left|center"
+                        android:shadowColor="#ff000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="1"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/medal_colorbg" />
+
+                    <TextView
+                        android:id="@+id/growUpTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:background="@drawable/level_bg"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:shadowColor="#ff000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:singleLine="true"
+                        android:text="LV 1"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#fffcc4"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/menuScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/settingsLayout"
+        android:layout_below="@+id/topLayout"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:gravity="left|center"
+        android:orientation="vertical"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/drawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/workbench"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/main_folder1"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:src="@drawable/ic_drawer_main_folder1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:enabled="true"
+                    android:gravity="left|center"
+                    android:shadowColor="#ff000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/drawer_workbench_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/partner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/workbench"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="-18dp"
+                android:background="@drawable/main_folder2"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:src="@drawable/ic_drawer_main_folder2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:enabled="false"
+                    android:gravity="left|center"
+                    android:shadowColor="#ff000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/drawer_partner_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/strategic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/partner"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/main_folder3"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:src="@drawable/ic_drawer_main_folder3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:enabled="false"
+                    android:gravity="left|center"
+                    android:shadowColor="#ff000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/drawer_strategic_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/strategic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="-18dp"
+                android:background="@drawable/main_folder4"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:src="@drawable/ic_drawer_main_folder4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:enabled="false"
+                    android:gravity="left|center"
+                    android:shadowColor="#ff000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/drawer_member_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/incentive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/member"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="-18dp"
+                android:background="@drawable/main_folder7"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:src="@drawable/ic_drawer_main_folder7" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:enabled="false"
+                    android:gravity="left|center"
+                    android:shadowColor="#ff000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/drawer_incentive_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/incentive"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="-18dp"
+                android:background="@drawable/main_folder18"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:src="@drawable/ic_drawer_main_folder8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:enabled="false"
+                    android:gravity="left|center"
+                    android:shadowColor="#ff000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/drawer_notice_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notice"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/main_folder5"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:src="@drawable/ic_drawer_main_folder5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:enabled="false"
+                    android:gravity="left|center"
+                    android:shadowColor="#ff000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/drawer_service_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/settingsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/main_folder1"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/settingsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:background="@drawable/actionbar_selector"
+            android:src="@drawable/ic_drawer_settings" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center" >
+
+            <ImageButton
+                android:id="@+id/messageTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/actionbar_selector"
+                android:src="@drawable/ic_drawer_message" />
+
+            <ImageView
+                android:id="@+id/stateTv"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right|top"
+                android:src="@drawable/state_bg" />
+        </FrameLayout>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="true" android:drawable="@drawable/kzx_ic_task_message"></item>
+    <item android:state_enabled="false" android:drawable="@drawable/kzx_ic_task_unmessage"></item>
+
+</selector>

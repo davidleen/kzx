@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actionBtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="8dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="8dp" >
+
+    <ImageView
+        android:id="@+id/medal_bg"
+        android:layout_width="@dimen/user_cover_middle_width"
+        android:layout_height="@dimen/user_cover_middle_height"
+        android:layout_alignTop="@+id/medal_content"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/medal_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/medal_bg"
+        android:gravity="left|center"
+        android:orientation="vertical"
+        android:paddingLeft="12dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/configNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/theme_normal" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_kzx_reason_position" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reason_bg"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:padding="6dp" >
+
+            <TextView
+                android:id="@+id/reasonTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/theme_normal" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/createTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_time_grey_12"
+                    android:drawablePadding="3dp"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#999" />
+
+                <TextView
+                    android:id="@+id/awarderNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#777" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

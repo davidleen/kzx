@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="grid_column_count">2</integer>
+   	<integer name="card_flip_time_full">300</integer>
+	<integer name="card_flip_time_half">150</integer>
+
+	<integer name="keyboard_hidden_offset">110</integer>
+
+	<integer name="undobar_hide_delay">5000</integer>
+
+	<integer name="emotions_columns">5</integer>
+	<integer-array name="drawer_list_header_indexes">
+		<item>0</item>
+		<item>7</item>
+	</integer-array>
+    <integer name="abs__max_action_buttons">2</integer>
+    <integer name="category_grid_cols">1</integer>
+    <integer name="pin_grid_cols">2</integer>
+    <integer name="pin_grid_cols_closeup">2</integer>
+    <integer name="closeup_board_cols">2</integer>
+    <integer name="pin_grid_desc_max_lines">3</integer>
+    <integer name="people_grid_cols">1</integer>
+    <integer name="anim_speed">500</integer>
+    <integer name="anim_speed_slow">800</integer>
+    <integer name="anim_speed_fast">300</integer>
+    <integer name="width_weight_sum">1</integer>
+    <integer name="width_weight_sum_search">1</integer>
+    <integer name="width_weight_sum_base10">10</integer>
+    <integer name="width_weight_login">10</integer>
+    <integer name="pin_max_desc_length">500</integer>
+    <integer name="frame_duration">30</integer>
+</resources>

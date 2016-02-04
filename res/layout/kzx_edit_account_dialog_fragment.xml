@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/name_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#777777" />
+
+        <EditText
+            android:id="@+id/nameTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/abs__textfield_searchview_holo_light"
+            android:gravity="left|center"
+            android:hint="@string/input_name_hint"
+            android:paddingBottom="8dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/phone_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#777777" />
+
+        <EditText
+            android:id="@+id/phoneTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/abs__textfield_searchview_holo_light"
+            android:gravity="left|center"
+            android:hint="@string/input_phone_hint"
+            android:paddingBottom="8dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/email_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#777777" />
+
+        <EditText
+            android:id="@+id/emailTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/abs__textfield_searchview_holo_light"
+            android:gravity="left|center"
+            android:hint="@string/input_email_hint"
+            android:paddingBottom="8dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444" >
+        </EditText>
+    </LinearLayout>
+
+</LinearLayout>

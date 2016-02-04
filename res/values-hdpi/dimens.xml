@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="user_cover_width">65dp</dimen>
+    <dimen name="user_cover_height">65dp</dimen>
+    <dimen name="user_cover_middle_width">45dp</dimen>
+    <dimen name="user_cover_middle_height">45dp</dimen>
+    <dimen name="user_cover_middle_width_2">50dp</dimen>
+    <dimen name="user_cover_middle_height_2">50dp</dimen>
+</resources>

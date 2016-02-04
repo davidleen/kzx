@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#efefef"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <LinearLayout
+            android:id="@+id/filterTypeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/kzx_login_edit_bg"
+            android:gravity="left|center"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:paddingTop="6dp" >
+
+            <TextView
+                android:id="@+id/filterTypeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/task_filter_default_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/station_divider_title_textcolor" />
+
+            <ImageView
+                android:id="@+id/filterTypeIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/popup_ic_downarrow_normal" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/filterSearchTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/kzx_login_edit_bg"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="5dp"
+            android:gravity="left|center"
+            android:imeOptions="actionDone"
+            android:padding="6dp"
+            android:singleLine="true"
+            android:hint="@string/task_search_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/station_divider_title_textcolor" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd"
+        android:visibility="gone" />
+
+</LinearLayout>

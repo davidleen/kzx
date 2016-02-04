@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <scale
+        android:duration="@android:integer/config_mediumAnimTime"
+        android:fromXScale="200%"
+        android:fromYScale="200%"
+        android:toXScale="100%"
+        android:toYScale="100%" />
+
+    <translate
+        android:duration="@android:integer/config_mediumAnimTime"
+        android:fromXDelta="-50%"
+        android:fromYDelta="-50%"
+        android:toXDelta="0%"
+        android:toYDelta="0%" />
+
+    <alpha
+        android:duration="@android:integer/config_shortAnimTime"
+        android:fromAlpha="0"
+        android:toAlpha="1" />
+
+</set>

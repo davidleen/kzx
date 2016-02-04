@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/kzx_login_edit_bg"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/customerTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableLeft="@drawable/kzx_ic_login_user"
+            android:drawablePadding="5dp"
+            android:gravity="left|center"
+            android:hint="@string/client_input_name_hint"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/station_textcolor"
+            android:textColorHint="#777" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd" />
+
+        <EditText
+            android:id="@+id/phoneTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableLeft="@drawable/kzx_ic_login_phone"
+            android:drawablePadding="2dp"
+            android:gravity="left|center"
+            android:hint="@string/client_input_phone_hint"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/station_textcolor"
+            android:textColorHint="#777" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSure"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_login"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/alert_dialog_ok"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+</LinearLayout>

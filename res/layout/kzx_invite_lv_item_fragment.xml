@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/letterTv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e2e2e2"
+        android:gravity="left|center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/station_divider_title_textcolor" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grid_selector"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="left|center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/theme_normal" />
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/nameTv"
+            android:alpha="0.5"
+            android:gravity="left|center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/station_divider_title_textcolor" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <ImageButton
+                android:id="@+id/inviteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/grid_selector"
+                android:padding="6dp"
+                android:src="@drawable/ic_tb_cp_add_active"
+                android:tint="#c7d75d" />
+            <!-- #9e7ed2 -->
+
+            <TextView
+                android:id="@+id/stateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/station_divider_title_textcolor"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#f3f3f3"
+        android:visibility="gone" />
+
+</LinearLayout>

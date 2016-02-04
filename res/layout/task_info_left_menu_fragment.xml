@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/leftMenuView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/menu_tip_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/executeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_selector"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="52dp"
+            android:paddingRight="52dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:text="@string/task_filter_default_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/task_colorbg" >
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:enabled="true"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/task_colorbg" >
+            </TextView>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#efefef" />
+
+        <LinearLayout
+            android:id="@+id/acceptanceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_selector"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="52dp"
+            android:paddingRight="52dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/task_filter_default_hint_2"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/task_colorbg" >
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:enabled="false"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/task_colorbg" >
+            </TextView>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#efefef" />
+
+        <LinearLayout
+            android:id="@+id/unEvaluationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_selector"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="52dp"
+            android:paddingRight="52dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/task_filter_default_hint_3"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/task_colorbg" >
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:enabled="false"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/task_colorbg" >
+            </TextView>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#efefef" />
+
+        <LinearLayout
+            android:id="@+id/evaluationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_selector"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="52dp"
+            android:paddingRight="52dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/task_filter_default_hint_4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/task_colorbg" >
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:enabled="false"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/task_colorbg" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

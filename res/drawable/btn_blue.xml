@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_enabled="true" android:state_pressed="true">
+   	    <layer-list>
+	        <item>
+		        <shape>
+			        <solid android:color="@color/statusbar_pressed_bg2"/>
+	                <corners android:radius="4dp"/>
+			    </shape>
+	        </item>
+	        <item android:bottom="2dp">
+		        <shape>
+			        <solid android:color="@color/statusbar_pressed_bg"/>
+			        <corners android:radius="4dp"/>
+			    </shape>
+	        </item>
+	    </layer-list>
+    </item>
+	<item android:state_enabled="true" android:state_focused="true">
+   	    <layer-list>
+	        <item>
+		        <shape>
+			        <solid android:color="@color/statusbar_pressed_bg2"/>
+	                <corners android:radius="4dp"/>
+			    </shape>
+	        </item>
+	        <item android:bottom="2dp">
+		        <shape>
+			        <solid android:color="@color/statusbar_pressed_bg"/>
+			        <corners android:radius="4dp"/>
+			    </shape>
+	        </item>
+	    </layer-list>
+    </item>
+	<item android:state_enabled="true">
+	    <layer-list>
+	        <item>
+		        <shape>
+			        <solid android:color="@color/statusbar_pressed_bg"/>
+	                <corners android:radius="4dp"/>
+			    </shape>
+	        </item>
+	        <item android:bottom="2dp">
+		        <shape>
+			        <solid android:color="@color/statusbar_bg"/>
+			        <corners android:radius="4dp"/>
+			    </shape>
+	        </item>
+	    </layer-list>
+	</item>
+	<item android:state_enabled="false">
+	    <layer-list>
+	        <item>
+		        <shape>
+			        <solid android:color="#afafaf"/>
+	                <corners android:radius="4dp"/>
+			    </shape>
+	        </item>
+	        <item android:bottom="2dp">
+		        <shape>
+			        <solid android:color="#c4c4c4"/>
+			        <corners android:radius="4dp"/>
+			    </shape>
+	        </item>
+	    </layer-list>
+	</item>
+</selector>

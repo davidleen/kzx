@@ -1,0 +1,726 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar_bg_task" >
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_selector"
+            android:padding="12dp"
+            android:src="@drawable/nav_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/grid_selector"
+            android:gravity="center"
+            android:text="@string/task_info_title_hint"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/menuBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_selector"
+            android:padding="12dp"
+            android:src="@drawable/nav_more"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomAction"
+        android:layout_below="@+id/actionBar" >
+
+        <com.android.yijiang.kzx.widget.StickyScrollView
+            android:id="@+id/contentScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:stuckShadowDrawable="@drawable/sticky_shadow_default"
+            app:stuckShadowHeight="5dp" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/topContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|center"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="10dp" >
+
+                        <ImageView
+                            android:id="@+id/titleIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/titleTv"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/kzx_ic_add_task_book" />
+
+                        <com.android.yijiang.kzx.widget.FloatLabeledEditText
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/titleTv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toLeftOf="@+id/flagCb"
+                            android:layout_toRightOf="@+id/titleIv"
+                            android:hint="@string/task_title_hint"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/theme_normal"
+                            app:fletFloatingHint="@string/task_title_hint"
+                            app:fletHintTextColor="#777777"
+                            app:fletTextGravity="left|center" />
+                        <!-- <TextView -->
+                        <!-- android:id="@+id/titleTv" -->
+                        <!-- android:layout_width="fill_parent" -->
+                        <!-- android:layout_height="wrap_content" -->
+                        <!-- android:layout_marginLeft="8dp" -->
+                        <!-- android:layout_toLeftOf="@+id/flagCb" -->
+                        <!-- android:layout_toRightOf="@+id/titleIv" -->
+                        <!-- android:gravity="left|center" -->
+                        <!-- android:paddingBottom="8dp" -->
+                        <!-- android:paddingTop="8dp" -->
+                        <!-- android:textAppearance="?android:attr/textAppearanceMedium" -->
+                        <!-- android:textColor="@color/theme_normal" -->
+                        <!-- android:textColorHint="@color/station_divider_title_textcolor" /> -->
+
+                        <ImageView
+                            android:id="@+id/flagCb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@+id/titleTv"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="2dp"
+                            android:src="@drawable/task_flag_style_old" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/line" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/contentIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/contentTv"
+                            android:src="@drawable/kzx_ic_add_task_list" />
+
+                        <com.android.yijiang.kzx.widget.FloatLabeledEditText
+                            android:id="@+id/contentTv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@+id/contentIv"
+                            android:hint="@string/task_explain_hint"
+                            app:fletFloatingHint="@string/task_explain_hint"
+                            app:fletHintTextColor="#777777"
+                            app:fletTextColor="#999999"
+                            app:fletTextGravity="left|center" />
+                        <!-- <TextView -->
+                        <!-- android:id="@+id/contentTv" -->
+                        <!-- android:layout_width="fill_parent" -->
+                        <!-- android:layout_height="wrap_content" -->
+                        <!-- android:layout_centerVertical="true" -->
+                        <!-- android:layout_marginLeft="8dp" -->
+                        <!-- android:layout_toRightOf="@+id/contentIv" -->
+                        <!-- android:alpha="0.85" -->
+                        <!-- android:background="@null" -->
+                        <!-- android:gravity="left|center" -->
+                        <!-- android:textAppearance="?android:attr/textAppearanceMedium" -->
+                        <!-- android:textColor="@color/theme_normal" /> -->
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/line" />
+
+                    <TextView
+                        android:id="@+id/executionTv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grid_selector"
+                        android:drawableLeft="@drawable/kzx_ic_add_task_user"
+                        android:drawablePadding="8dp"
+                        android:ellipsize="end"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/theme_normal" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/line" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:orientation="horizontal"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/taskTimeIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/kzx_ic_add_task_time_info" />
+
+                        <TextView
+                            android:id="@+id/taskTimeTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/theme_normal" />
+
+                        <TextView
+                            android:id="@+id/taskDayTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#fd2e1f" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/line" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:orientation="horizontal"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/kzx_ic_add_task_chart" />
+
+                        <TextView
+                            android:id="@+id/acceptanceBarTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:ellipsize="end"
+                            android:gravity="left|center"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#444" />
+
+                        <ProgressBar
+                            android:id="@+id/acceptanceBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_weight="1"
+                            android:max="100"
+                            android:progressDrawable="@drawable/download_progress" />
+
+                        <TextView
+                            android:id="@+id/acceptanceBarStateTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="left|center"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#444" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/acceptanceTv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="28dp"
+                        android:ellipsize="end"
+                        android:gravity="left|center"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#444" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/middleContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/topContent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/expandable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|center"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" >
+
+                        <LinearLayout
+                            android:id="@+id/acceptanceCustomList"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="40dp" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            android:padding="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/kzx_ic_add_task_attachment"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center"
+                                android:text="@string/task_folder_max_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/theme_normal" />
+
+                            <TextView
+                                android:id="@+id/attachmentTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:gravity="left|center"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#0079ff" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/attachmentCustomList"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="40dp" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/grid_selector"
+                                android:drawableLeft="@drawable/kzx_ic_add_task_user_other"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center"
+                                android:padding="10dp"
+                                android:text="@string/task_copied_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/theme_normal" />
+
+                            <TextView
+                                android:id="@+id/relateCopyTv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:gravity="right|center"
+                                android:hint="@string/task_target_empty_hint"
+                                android:singleLine="true"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/station_divider_title_textcolor" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/grid_selector"
+                                android:drawableLeft="@drawable/kzx_ic_add_task_pin"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center"
+                                android:padding="10dp"
+                                android:text="@string/task_target_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/theme_normal" />
+
+                            <TextView
+                                android:id="@+id/relateTargetDescEmptyTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:ellipsize="end"
+                                android:gravity="left|center"
+                                android:hint="@string/task_target_empty_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/station_divider_title_textcolor"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/relateTargetDescTv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="left|center"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/station_divider_title_textcolor"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/grid_selector"
+                                android:drawableLeft="@drawable/kzx_ic_add_task_statistics"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center"
+                                android:padding="10dp"
+                                android:text="@string/task_task_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/theme_normal" />
+
+                            <TextView
+                                android:id="@+id/relateTaskEmptyTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:ellipsize="end"
+                                android:gravity="left|center"
+                                android:hint="@string/task_target_empty_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/station_divider_title_textcolor"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/taskCustomList"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="40dp" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/grid_selector"
+                                android:drawableLeft="@drawable/kzx_ic_add_task_people"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center"
+                                android:padding="10dp"
+                                android:text="@string/task_customer_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/theme_normal" />
+
+                            <TextView
+                                android:id="@+id/clientNameTv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center"
+                                android:text="@string/task_customer_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/station_divider_title_textcolor"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:id="@+id/clientNameEmptyTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:ellipsize="end"
+                                android:gravity="left|center"
+                                android:hint="@string/task_target_empty_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/station_divider_title_textcolor"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/header"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/headerIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_more_arrow_down" />
+
+                        <TextView
+                            android:id="@+id/headerTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:gravity="left|center"
+                            android:hint="@string/task_more_hint"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#999999" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/taskProcessContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/middleContent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/taskProcessBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grid_selector7"
+                        android:drawableLeft="@drawable/kzx_ic_task_message_title"
+                        android:drawableRight="@drawable/arrow_white"
+                        android:gravity="left|center"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="8dp"
+                        android:tag="sticky-nonconstant-hastransparancy"
+                        android:text="@string/taskprocess_title_hint"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:id="@+id/taskProcessCustomList"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottomReserved"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/taskProcessContent"
+                    android:orientation="vertical"
+                    android:visibility="invisible" >
+                </LinearLayout>
+
+                <!-- <include -->
+                <!-- android:layout_width="fill_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_below="@+id/taskProcessContent" -->
+                <!-- android:layout_marginBottom="20dp" -->
+                <!-- layout="@layout/kzx_bench_execute_taskprocess_footer_fragment2" -->
+                <!-- android:visibility="invisible" /> -->
+            </RelativeLayout>
+        </com.android.yijiang.kzx.widget.StickyScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/coverBg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottomAction"
+        android:background="#55000000"
+        android:visibility="gone" />
+
+    <com.android.yijiang.kzx.widget.ResizeLayout
+        android:id="@+id/bottomAction"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f6f6f6"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/contentCt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/kzx_login_edit_bg"
+                android:gravity="left|center"
+                android:hint="@string/taskprocess_send_hint"
+                android:imeOptions="actionSend"
+                android:inputType="textMultiLine"
+                android:padding="6dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/station_divider_title_textcolor" />
+
+            <TextView
+                android:id="@+id/sendBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:padding="10dp"
+                android:text="@string/send_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/send_colorbg" />
+        </LinearLayout>
+    </com.android.yijiang.kzx.widget.ResizeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomAction"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/kzx_bench_execute_taskprocess_footer_fragment" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/default_load_view"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/footer_loading" />
+
+    <TextView
+        android:id="@+id/img_empty_feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="12dp"
+        android:drawableTop="@drawable/img_empty_feed"
+        android:text="@string/request_empty"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#c4c4c4"
+        android:visibility="gone" />
+
+</RelativeLayout>

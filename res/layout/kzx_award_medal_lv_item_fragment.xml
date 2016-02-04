@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/medalAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_entry_item"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp" >
+
+        <ImageView
+            android:id="@+id/medal_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/medalTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444" />
+    </LinearLayout>
+
+</FrameLayout>

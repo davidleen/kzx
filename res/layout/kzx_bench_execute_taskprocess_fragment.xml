@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3" >
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar_bg_task" >
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_selector"
+            android:padding="12dp"
+            android:src="@drawable/nav_arrow_back" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/grid_selector"
+            android:gravity="center"
+            android:text="@string/taskprocess_title_hint"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/menuBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_selector"
+            android:padding="12dp"
+            android:src="@drawable/nav_more"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomAction"
+        android:layout_below="@+id/actionBar" >
+
+        <ListView
+            android:id="@+id/dateCustomList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="@color/transport"
+            android:dividerHeight="10dp"
+            android:drawSelectorOnTop="false"
+            android:fadingEdge="none"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@color/transport"
+            android:scrollbars="none"
+            android:scrollingCache="false"
+            android:smoothScrollbar="true" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/coverBg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottomAction"
+        android:background="#55000000"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/bottomAction"
+        android:background="#dddddd" />
+
+    <com.android.yijiang.kzx.widget.ResizeLayout
+        android:id="@+id/bottomAction"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f6f6f6"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/contentTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/kzx_login_edit_bg"
+            android:gravity="left|center"
+            android:hint="@string/taskprocess_send_hint"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine"
+            android:padding="6dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/station_divider_title_textcolor" />
+
+        <TextView
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:padding="10dp"
+            android:text="@string/send_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/send_colorbg" />
+    </com.android.yijiang.kzx.widget.ResizeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomAction"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/kzx_bench_execute_taskprocess_footer_fragment" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd" />
+    </LinearLayout>
+
+    <include layout="@layout/kzx_lv_default_fragment" />
+
+</RelativeLayout>

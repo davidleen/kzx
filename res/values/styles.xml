@@ -1,0 +1,199 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="mystyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/dialogWindowAnim6</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transport</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="dialogWindowAnim6" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/drop_in_from_left</item>
+        <item name="android:windowExitAnimation">@anim/drop_out_to_right</item>
+    </style>
+    <style name="popWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/menu_in</item>
+        <item name="android:windowExitAnimation">@anim/menu_out</item>
+    </style>
+    <style name="taskPopWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/tip_menu_in</item>
+        <item name="android:windowExitAnimation">@anim/tip_menu_out</item>
+    </style>   
+    <!-- 底部弹出DIALOG -->
+    <style name="mystyle3" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/Window.Animation.Slide</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="Window.Animation.Slide" parent="@style/Window.Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/anim_slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/anim_slide_out_bottom</item>
+    </style>
+    <style name="Window.Animation.Dialog" parent="@android:style/Animation.Dialog" />
+    
+    <style name="AppBaseTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light">
+		<item name="android:windowNoTitle">true</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+	<style name="AppThemeLight" parent="android:Theme.Light">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+    <style name="activityAnimation" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_window_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_window_close_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_window_close_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_window_close_out</item>
+    </style>
+
+    <style name="AppTheme_Login" parent="@android:style/Theme.NoTitleBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowAnimationStyle">@style/activityLoginAnimation</item>
+    </style>
+    <style name="activityLoginAnimation" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_slide_in_bottom</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_slide_out_bottom</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_slide_in_bottom</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_slide_out_bottom</item>
+    </style>
+
+    <style name="ProgressBar.Horizontal" parent="@android:style/Widget.ProgressBar.Horizontal"></style>
+
+    <style name="dialog_animation3" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="dialogWindowAnim4" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="dialog_animation4" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/dialogWindowAnim4</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@null</item>
+        <item name="android:minHeight">14dip</item>
+        <item name="android:maxHeight">14dip</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+
+    <style name="avgRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@null</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:minHeight">14dip</item>
+        <item name="android:maxHeight">14dip</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+
+    <style name="noteRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@null</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+    
+	<style name="Widget"/>
+    <style name="Widget.TagView" parent="@android:style/Widget.TextView">
+        <item name="tagCornerRadius">6dp</item>
+        <item name="tagPadding">8dp</item>
+        <item name="tagUppercase">true</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="medium_bold">
+        <item name="android:textSize">@dimen/medium_font_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="medium_bold_hms" parent="medium_bold">
+        <item name="android:textSize">@dimen/medium_font_size_hms</item>
+    </style>
+    <style name="medium_light">
+        <item name="android:textSize">@dimen/medium_font_size</item>
+    </style>
+    <style name="medium_light_header" parent="medium_light">
+        <item name="android:textSize">@dimen/medium_font_size_header</item>
+    </style>
+    <style name="medium_light_hms" parent="medium_light">
+        <item name="android:textSize">@dimen/medium_font_size_hms</item>
+    </style>
+    <style name="medium_bold_date" parent="@style/medium_bold">
+        <item name="android:textSize">@dimen/medium_date_font_size</item>
+    </style>
+    <style name="medium_light_date" parent="@style/medium_bold">
+        <item name="android:textSize">@dimen/medium_date_font_size</item>
+    </style>
+    <style name="medium_light_expiration">
+        <item name="android:textSize">@dimen/medium_expiration_font_size</item>
+    </style>
+    <style name="label">
+        <item name="android:textSize">@dimen/label_font_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="dialpad">
+        <item name="android:textSize">@dimen/dialpad_font_size</item>
+    </style>
+    <style name="dialpad_text" parent="dialpad">
+        <item name="android:textSize">@dimen/dialpad_font_size_ampm</item>
+    </style>
+    <style name="dialog_button">
+        <item name="android:textSize">@dimen/dialog_button_font_size</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+    <style name="tablet_dialpad">
+        <item name="android:textSize">@dimen/tablet_dialpad_font_size</item>
+    </style>
+    <style name="tablet_dialpad_text">
+        <item name="android:textSize">@dimen/tablet_dialpad_font_size_ampm</item>
+    </style>
+
+    <style name="aosp_time_label">
+        <item name="android:textSize">@dimen/time_label_size</item>
+        <item name="android:textColor">@color/numbers_text_color</item>
+    </style>
+
+    <style name="aosp_ampm_label">
+        <item name="android:textSize">@dimen/ampm_label_size</item>
+        <item name="android:textColor">@color/ampm_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="aosp_day_of_week_label_condensed" />
+</resources>

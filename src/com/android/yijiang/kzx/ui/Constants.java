@@ -1,0 +1,79 @@
+package com.android.yijiang.kzx.ui;
+
+import java.util.UUID;
+
+
+public class Constants {
+	public static final int Pagesize = 20;
+	public static final int Blursize = 15;
+	public static final String USER_AGENT="ANDROID";
+	public static final String ACCESS_KEY="ACCESS_KEY";
+	public static final String ACCESS_TOKEN="ACCESS_TOKEN";
+	public static final String JSESSIONID="JSESSIONID";
+	public static final String _MD5_CODE_="_MD5_CODE_";
+	public static final double Filesize = 100;//文件大小
+	public static final String publicAPI = "http://login.kuaizhixing.com";//http://122.13.76.74:80,14.18.203.23:8080
+	public static final String locationAPI = "http://login.kuaizhixing.com";//
+	public static final String versionAPI = locationAPI+"/kzx/app/updateinfo.json";
+	public static final String loginAPI=locationAPI+"/doLogin.html";//登录
+	public static final String doRegisterByPhoneAPI=locationAPI+"/doRegisterByPhone.html";//免注册登录
+	public static final String sendCodeByPhoneAPI=locationAPI+"/sendCodeByPhone.html";//获取验证码	
+	public static final String validateCodeByPhoneAPI=locationAPI+"/validateCodeByPhone.html";//验证码验证	
+	public static final String resetPasswordAPI=locationAPI+"/resetPassword.html";//重置密码	
+	public static final String getKzxTokenAPI=locationAPI+"/getKzxToken.html";//获取账户信息
+	public static final String taskAPI=locationAPI+"/task/query.html";//任务列表
+	public static final String queryCanRelateAPI=locationAPI+"/target/queryCanRelate.html";//关联目标
+	public static final String queryClientAllAPI=locationAPI+"/client/queryAll.html";//关联客户
+	public static final String queryCanRelateTaskAPI=locationAPI+"/task/queryCanRelate.html";//相关任务
+	public static final String queryAllByLeaderAPI=locationAPI+"/member/queryAllByLeaderAndCompany.html";//执行人
+	public static final String queryCompanyMemberAPI=locationAPI+"/member/queryCompanyMember.html";//抄送人
+	public static final String queryTaskDetailAPI=locationAPI+"/task/detail.html";//任务详情
+	public static final String taskAttentionAPI=locationAPI+"/taskorder/add.html";//任务关注
+	public static final String removeAttentionAPI=locationAPI+"/taskorder/delete.html";//取消任务关注
+	public static final String taskPassAPI=locationAPI+"/task/query.html";//任务(过)
+	public static final String taskProcessAPI=locationAPI+"/taskprocess/query.html";//任务反馈
+	public static final String addTaskProcessAPI=locationAPI+"/taskprocess/add4Phone.html";//添加任务反馈
+	public static final String downloadAPI=locationAPI+"/attachment/download.html";//下载附件
+	public static final String addTaskAPI=locationAPI+"/task/add4Phone.html";//添加任务
+	public static final String editTaskAPI=locationAPI+"/task/edit4Phone.html";//编辑任务
+	public static final String cancelTaskAPI=locationAPI+"/task/cancelTask.html";//取消任务
+	public static final String relateClientAPI=locationAPI+"/client/relateClient.html";//关联客户(存在则更新,不存在新增)
+	public static final String queryAllClientAPI=locationAPI+"/client/queryAll.html";
+	public static final String noticeAPI=locationAPI+"/notice/query.html";//团队公告
+	public static final String noticeInfoAPI=locationAPI+"/notice/detail.html";//团队公告详情
+	public static final String queryServicerAllAPI=locationAPI+"/message/queryServicerAll.html";//服务商
+	public static final String queryServicerTasksAPI=locationAPI+"/task/queryServicerTasks.html";//服务商任务查询
+	public static final String queryMedalAPI=locationAPI+"/medal/query.html";//激励认可查询
+	public static final String addMedalAPI=locationAPI+"/medal/add.html";//激励认可新增
+	public static final String queryMedalconfigAPI=locationAPI+"/medal/query_medalconfig.html";//勋章配置
+	public static final String queryTargetAPI=locationAPI+"/target/query.html";//战略目标
+	public static final String queryDutyersAPI=locationAPI+"/targetdutyers/queryDutyers.html";//战略目标(
+	public static final String queryTargetInfoAPI=locationAPI+"/target/detail.html";//战略目标详情
+	public static final String targetCompletedAPI=locationAPI+"/target/completed.html";//完成目标
+	public static final String targetCancelAPI=locationAPI+"/target/cancelTarget.html";//取消目标
+	public static final String queryPartnerAPI=locationAPI+"/member/partner.html";//我的伙伴
+	public static final String cancelTargetAPI=locationAPI+"/target/cancelTarget.html";//取消目标
+	public static final String queryMessageAPI=locationAPI+"/message/queryAll.html";//获取消息
+	public static final String queryByAccountAPI=locationAPI+"/message/queryByAccount.html";//获取账号消息
+	public static final String queryByPartnerAPI=locationAPI+"/task/queryByPartner.html";//我的伙伴任务信息
+	public static final String queryAllByCompanyAPI=locationAPI+"/member/queryAllByCompany.html";//全体成员
+	public static final String queryMedalByMemberAPI=locationAPI+"/medal/query_medal.html";//获得勋章
+	public static final String queryEndIsGoodAPI=locationAPI+"/task/query_endisgood.html";//领导好评
+	public static final String queryClientEndIsGoodAPI=locationAPI+"/task/query_clientendisgood.html";//客户满意度
+	public static final String uploadAvaterAPI=locationAPI+"/attachment/upload_avater.html";//上传头像
+	public static final String uploadMemberAPI=locationAPI+"/member/modify.html";//上传资料
+	public static final String uploadAccountAPI=locationAPI+"/account/modify.html";//上传资料
+	public static final String addMemberAPI=locationAPI+"/member/add.html";//邀请成员
+	public static final String phoneFirstValidateAPI=locationAPI+"/account/phoneFirstValidate.html";//首次验证
+	public static final String acceptInviteAPI=locationAPI+"/member/acceptInvite.html";//接受邀请
+	public static final String refuseInviteAPI=locationAPI+"/member/refuseInvite.html";//拒绝邀请
+	public static final String teamDetailAPI1=locationAPI+"/team/detail.html";//获取团队信息
+	public static final String memberDetailAPI=locationAPI+"/member/detail.html";//获取成员信息
+	public static final String createCompanyAPI=locationAPI+"/company/create.html";//创建团队信息
+	public static final String companyDetailAPI=locationAPI+"/company/detail.html";//团队信息
+	public static final String companyEditAPI=locationAPI+"/company/editName.html";//修改团队信息
+	public static final String leaveCompanyAPI=locationAPI+"/member/leave.html";//离开团队
+	public static final String dismissCompanyAPI=locationAPI+"/company/dismiss.html";//解散团队
+	public static final String queryByPhoneAPI=locationAPI+"/account/queryByPhone.html";//验证手机号是否存在
+	public static final String validatecodeAPI=locationAPI+"/validatecode.html?"+UUID.randomUUID();//登录错误三次获取验证码图片
+}

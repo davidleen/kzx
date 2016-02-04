@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/publicActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar_bg_partner"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_selector"
+            android:padding="12dp"
+            android:src="@drawable/nav_arrow_back" />
+
+        <TextView
+            android:id="@+id/currentTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/btn_add_task"
+            android:layout_toRightOf="@+id/backBtn"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/btn_add_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/actionbar_selector"
+            android:drawableLeft="@drawable/blue_comm_btn_top_add"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/task_add_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <com.android.yijiang.kzx.widget.tab.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9d7dd2"
+        app:allowWidthFull="true"
+        app:dividerColor="#a488d5"
+        app:dividerPadding="2dp"
+        app:indicatorHeight="0dp"
+        app:slidingBlock="@drawable/kzx_partner_selected_action"
+        app:underlineHeight="0dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="@string/task_tab_zhixing"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/selector_slide_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:text="@string/task_tab_faqi"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/selector_slide_title" />
+        </LinearLayout>
+    </com.android.yijiang.kzx.widget.tab.PagerSlidingTabStrip>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/content_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

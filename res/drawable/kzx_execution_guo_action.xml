@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/kzx_ic_task_guo" android:maxLevel="0"/>
+    <item android:drawable="@drawable/kzx_ic_task_unguo" android:maxLevel="1"/>
+
+</selector>

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">快执行</string>
+    <string name="app_copyright">版权所有</string>
+    <string name="request_error">请求失败</string>
+    <string name="request_network_error">网络未开启</string>
+    <string name="request_load_end">已全部加载</string>
+    <string name="request_timeout">请求超时</string>
+    <string name="request_empty">还没有数据。</string>
+    <string name="address_search_book_title">搜索通讯录</string>
+    <string name="invite_title">邀请新伙伴</string>
+    <string name="acceptance_title">验收标准</string>
+    <string name="validate_title">确认您的信息</string>
+    <string name="date_title">选择日期</string>
+    <string name="time_title">选择时间</string>
+    <string name="report_title">汇报人</string>
+    <string name="create_team_title">创建团队</string>
+    <string name="create_team_success">团队创建成功!</string>
+    <string name="create_team_invite_success">邀请伙伴</string>
+    <string name="create_team_ok_success">好</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="search_hint">搜索关键字</string>
+    <string name="message_box_title">消息盒子</string>
+    <string name="team_tip_title">	您还没有获得任何勋章，你想享受拥有万众举目的崇拜目光吗？高效执行，快乐工作,集多种荣誉为一身，赶紧行动吧！</string>
+    <string name="name_hint">姓名:</string>
+    <string name="input_name_hint">请输入姓名</string>
+    <string name="phone_hint">手机:</string>
+    <string name="input_phone_hint">请输入手机号</string>
+    <string name="input_true_phone_hint">请输入正确手机号</string>
+    <string name="input_team_hint">请输入团队名称</string>
+    <string name="email_hint">邮箱:</string>
+    <string name="read_hint">已读</string>
+    <string name="noread_hint">未读</string>
+    <string name="input_email_hint">请输入邮箱</string>
+    <string name="department_hint">部门:</string>
+    <string name="huijibaoren_hint">汇报人:</string>
+    <string name="input_code_hint">请输入验证码</string>
+    <string name="get_code_hint">获取验证码</string>
+    <string name="input_newpwd_hint">输入新密码</string>
+    <string name="input_renewpwd_hint">再输入新密码</string>
+    <string name="seek_done_100_hint">请确认[验收标准]已勾选</string>
+    <string name="input_username_hint">手机号</string>
+    <string name="input_medal_title_hint">请输入勋章标题</string>
+    <string name="input_medal_reason_hint">请输入获奖理由</string>
+    <string name="input_password_hint">密码</string>
+    <string name="input_codes_hint">验证码</string>
+    <string name="contact_phone_hint">电话联系</string>
+    <string name="input_department_hint">输入部门</string>
+    <string name="leaver_team">离开我的团队</string>
+    <string name="create_team">创建我的团队</string>
+    <string name="default_my_team">我的团队</string>
+    <string name="upload_success">图片上传成功</string>
+    <string name="upload_error">未找到存储卡，无法存储照片！</string>
+    <string name="upload_max_length">最多3张</string>
+    <string name="task_target_amount">个关联目标</string>
+    <string name="task_client_amount">个关联客户</string>
+    <string name="task_content_hint">请填写任务内容</string>
+    <string name="task_input_title_hint">请填写任务标题</string>
+    <string name="task_execution_hint">请选择执行人</string>
+    <string name="task_cycle_hint">完成周期不能为空</string>
+    <string name="task_wait_more">等</string>
+    <string name="task_person_more">人</string>
+    <string name="task_day">天</string>
+    <string name="file_size">大小:</string>
+    <string name="file_name">文件:</string>
+    <string name="file_url">获取下载地址...</string>
+    <string name="please_selected">请选择</string>
+    <string name="cycle_end_hint">结束时间不正确</string>
+    <string name="input_taskprocess_hint">请填写反馈内容</string>
+    <string name="taskprocess_success">反馈成功</string>
+    <string name="search">搜索</string>
+    <string name="task_count">%1$d个任务</string>
+    <string name="select_sure">确定(%1$d)</string>
+    <string name="chaoqi_day">超期:%1$d天</string>
+    <string name="day">%1$d天</string>
+    <string name="day_bantian">半天</string>
+    <string name="done_count">完成:%s%</string>
+    <string name="zaiban_count">在办:%s</string>
+    <string name="renwu_count">任务:%s</string>
+    <string name="acceptance">验收标准:%s</string>
+    <string name="notice_user">发布人:%s</string>
+    <string name="send_phone_hint">%s的验证码</string>
+    <string name="zongrenwu_count">总任务:%s</string>
+    <string name="zhixingrenwu_count">执行任务:%s</string>
+    <string name="faqirenwu_count">发起任务:%s</string>
+    <string name="daipingjia_count">待评价:%s</string>
+    <string name="shengyu_day">剩余:%1$d天</string>
+    <string name="shengyu_bantian_day">剩余:半天</string>
+    <string name="zerenren_count">责任人:%1$d位</string>
+    <string name="client_name">客户:%s</string>
+    <string name="client_phone">电话:%s</string>
+    <string name="name_workspace">%s的任务</string>
+    <string name="name_message">%s的消息</string>
+    <string name="get_again">重新获取</string>
+    <string name="add_target_tip">请于网页端进行新增操作</string>
+    <string name="yanshou_title">验收</string>
+    <string name="pingjia_title">是否好评</string>
+    <string name="taskprocess_empty">任务还没有反馈</string>
+    <string name="get_pwd_title">找回密码</string>
+    <string name="register_title">免注册登录</string>
+    <string name="about_title">关于快执行</string>
+    <string name="term_settings_title">团队设置</string>
+    <string name="seek_bar_state_1">未开始</string>
+    <string name="seek_bar_state_2">已启动</string>
+    <string name="seek_bar_state_3">已过半</string>
+    <string name="seek_bar_state_4">快完成</string>
+    <string name="seek_bar_state_5">已完成</string>
+    <string name="seek_bar_state">进度</string>
+    <string name="validate_phone">电话格式不正确</string>
+    <string name="validate_phone_code">验证码不正确</string>
+    <string name="validate_pwd">密码不正确</string>
+    <string name="validate_repwd">重复密码不正确</string>
+    <string name="refuse_invite">拒绝邀请</string>
+    <string name="accept_invite">接受邀请</string>
+    <string name="login_hint">登录</string>
+    <string name="noregister_login_hint">免注册登录</string>
+    <string name="forget_pwd_hint">忘记密码?</string>
+    <string name="send_hint">发送</string>
+    <string name="alert_dialog_ok">确定</string>
+    <string name="alert_dialog_contact">联系客服</string>
+    <string name="alert_dialog_close">关闭</string>
+    <string name="alert_dialog_retry">重试</string>
+    <string name="alert_dialog_login">登录</string>
+    <string name="alert_dialog_update">下载</string>
+    <string name="alert_dialog_cancel">取消</string>
+    <string name="alert_dialog_post">提交</string>
+    <string name="alert_dialog_logout">确定要登出?</string>
+    <string name="alert_dialog_exit">确定要退出?</string>
+    <string name="alert_dialog_invite">是否邀请?</string>
+    <string name="alert_dialog_invite_2">是否邀请新成员进来?</string>
+    <string name="alert_dialog_cancel_task">确定要取消该任务?</string>
+    <string name="alert_dialog_out">确定要离开?</string>
+    <string name="alert_dialog_contiue">添加并继续</string>
+    <string name="alert_dialog_add">确认添加</string>
+    <string name="preferences_amount">账户</string>
+    <string name="preferences_version">版本</string>
+    <string name="preferences_about">关于</string>
+    <string name="login_empty">还未登录</string>
+    <string name="leave_team_title">确定要离开团队?</string>
+    <string name="preference_key_next_check_update_time">next_check_update_time</string>
+    <string name="preference_key_skip_check_update_version_code">skip_check_update_version_code</string>
+    <string name="preference_name">android_autoupdate_preference</string>
+    <string name="autoupdate_update_tips">更新提示</string>
+    <string name="autoupdate_confirm">确定</string>
+    <string name="autoupdate_cancel">取消</string>
+    <string name="autoupdate_skip">忽略</string>
+    <string name="autoupdate_no_update">当前已是最新版本</string>
+    <string name="textOn">ON</string>
+    <string name="textOff">OFF</string>
+    <string name="prompt">提示</string>
+    <string name="exit_app">你确定要退出应用吗?</string>
+    <string name="done_cycle">到期时间</string>
+    <string name="confirm">确定</string>
+    <string name="call">拨打</string>
+    <string name="getConfirm">马上获取</string>
+    <string name="confirm_update">更新</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="files">Files</string>
+    <string name="directories">Folders</string>
+    <string name="goUp">Go Up</string>
+    <string name="all">选择全部</string>
+    <string name="none">取消全部</string>
+    <string name="picker_cancel">取消</string>
+    <string name="picker_set">确定</string>
+    <string name="hours_label">h</string>
+    <string name="minutes_label">m</string>
+    <string name="seconds_label">s</string>
+    <string name="hours_label_description">hours</string>
+    <string name="minutes_label_description">minutes</string>
+    <string name="seconds_label_description">seconds</string>
+    <string name="timer_delete">删除</string>
+    <string name="time_picker_ampm_label">--</string>
+    <string name="time_picker_time_seperator">:</string>
+    <string name="time_picker_00_label">:00</string>
+    <string name="time_picker_30_label">:30</string>
+    <string name="number_picker_minus_label">—</string>
+    <string name="number_picker_seperator">.</string>
+    <string name="number_delete">删除</string>
+    <string name="number_picker_plus_minus">+/-</string>
+    <string name="hms_picker_hours_label">H</string>
+    <string name="hms_picker_minutes_label">M</string>
+    <string name="hms_picker_seconds_label">S</string>
+    <string name="expiration_picker_seperator">/</string>
+    <string name="month_c">MONTH</string>
+    <string name="day_c">DAY</string>
+    <string name="year_c">YEAR</string>
+
+    <!-- 1.3.1 -->
+    <string name="min_error">Please input a number greater than or equal to %1$d</string>
+    <string name="max_error">Please input a number less than or equal to %1$d</string>
+    <string name="min_max_error">Please input a number between %1$d and %2$d</string>
+
+    <!-- From AOSP -->
+    <!-- Label for button to confirm chosen date or time [CHAR LIMIT=30] -->
+    <string name="done_label">完成</string>
+    <!--
+         Content description for the hour selector in the time picker, which displays
+         selectable hours of the day along the inside edge of a circle, as in an analog clock.
+         [CHAR LIMIT=50]
+    -->
+    <string name="hour_picker_description">Hours circular slider</string>
+    <!--
+         Content description for the minute selector in the time picker, which displays
+         selectable five-minute intervals along the inside edge of a circle, as in an analog clock.
+         [CHAR LIMIT=50]
+    -->
+    <string name="minute_picker_description">Minutes circular slider</string>
+    <!-- Accessibility announcement for hour circular picker [CHAR LIMIT=NONE] -->
+    <string name="select_hours">选择小时</string>
+    <!-- Accessibility announcement for minute circular picker [CHAR LIMIT=NONE] -->
+    <string name="select_minutes">选择分钟</string>
+
+    <!--
+        Content description for the month and day selector in the date picker, which displays
+        a selectable grid of days laid out by month.
+        [CHAR LIMIT=50]
+    -->
+    <string name="day_picker_description">Month grid of days</string>
+    <!--
+        Content description for the year selector in the date picker, which displays
+        a scrolling, vertical list of years.
+        [CHAR LIMIT=50]
+    -->
+    <string name="year_picker_description">Year list</string>
+    <!-- Accessibility announcement for the day picker [CHAR LIMIT=NONE] -->
+    <string name="select_day">Select month and day</string>
+    <!-- Accessibility announcement for the year picker [CHAR LIMIT=NONE] -->
+    <string name="select_year">Select year</string>
+    <!-- Accessibility description for the item that is currently selected. -->
+    <string name="item_is_selected">%1$s selected</string>
+    <!-- Accessibility announcement when a number that had been typed in is deleted [CHAR_LIMIT=NONE] -->
+    <string name="deleted_key">%1$s deleted</string>
+
+    <!-- DO NOT TRANSLATE -->
+    <string name="time_placeholder">--</string>
+    <!-- DO NOT TRANSLATE -->
+    <string name="time_separator">:</string>
+
+    <!-- DO NOT TRANSLATE -->
+    <string name="radial_numbers_typeface">sans-serif</string>
+    <!-- DO NOT TRANSLATE -->
+    <string name="sans_serif">sans-serif</string>
+
+    <!-- DO NOT TRANSLATE -->
+    <string name="day_of_week_label_typeface">sans-serif</string>
+
+    <string-array name="avatar">
+        <item>获取图库照片</item>
+        <item>拍照获取图片</item>
+    </string-array>
+
+    <!-- 附件 -->
+    <string name="file_max_hint">最多3个附件</string>
+    <string name="file_folder_hint">当前目录:</string>
+    <!-- 客户 -->
+    <string name="client_select_title_hint">选择客户</string>
+    <string name="client_sure_hint">客户确认</string>
+    <string name="client_phone_hint">电话号码</string>
+    <string name="call_phone_hint">确定要呼叫?</string>
+    <string name="client_name_hint">姓名</string>
+    <string name="client_input_phone_hint">输入客户电话号码</string>
+    <string name="client_input_name_hint">输入客户姓名</string>
+    <string name="client_tab_tongxunlu_hint">通讯录</string>
+    <string name="client_tab_input_hint">手动输入</string>
+    <!-- 工作台 -->
+    <string name="drawer_workbench_hint">工作台</string>
+    <string name="drawer_partner_hint">我的伙伴</string>
+    <string name="drawer_strategic_hint">战略目标</string>
+    <string name="drawer_member_hint">全体成员</string>
+    <string name="drawer_incentive_hint">激励认可</string>
+    <string name="drawer_notice_hint">团队公告</string>
+    <string name="drawer_service_hint">服务商</string>
+    <string name="drawer_settings_hint">设置</string>
+    <!-- 关于 -->
+    <string name="about_grade_hint">去评分</string>
+    <string name="about_tel_hint">电话:</string>
+    <string name="about_tel_text">0591-63123239</string>
+    <string name="about_email_hint">邮箱:</string>
+    <string name="about_email_text">service@larrymanage.com</string>
+    <string name="about_website_hint">官网:</string>
+    <string name="about_website_text">http://www.kuaizhixing.com</string>
+    <string name="about_wechat_hint">推荐朋友使用:</string>
+        <string name="about_wechat_website_hint">http://a.app.qq.com/o/simple.jsp?pkgname=com.android.yijiang.kzx</string>
+    <string name="please_speak">请说话</string>
+    <string name="please_speak_error"> 抱歉您的系统不支持语音识别输入</string>
+    <string name="about_introduced_hint">功能介绍</string>
+    <string name="about_help_hint">帮助与反馈</string>
+    <!-- 个人中心 -->
+    <string name="account_center_hint">个人中心</string>
+    <string name="account_department_hint">部门名:</string>
+    <string name="account_report_hint">汇报人:</string>
+    <string name="account_medal_hint">勋章</string>
+    <string name="account_leader_hint">领导好评</string>
+    <string name="account_client_hint">客户满意</string>
+    <!-- 验收标准 -->
+    <string name="acceptance_edit_hint">输入验收标准</string>
+    <string name="name_edit_hint">请输入姓名</string>
+    <string name="phone_edit_hint">请输入手机号</string>
+    <!-- 勋章 -->
+    <string name="medal_input_hint">输入获奖理由</string>
+    <string name="medal_done_hint">颁发</string>
+    <string name="medal_done_who_hint">颁发给:</string>
+    <!-- 任务 -->
+    <string name="task_add_title_hint">新增任务</string>
+    <string name="task_title_hint">任务标题</string>
+    <string name="task_explain_hint">任务说明</string>
+    <string name="task_content_title_hint">任务内容</string>
+    <string name="task_emergency_hint">是否紧急</string>
+    <string name="task_executor_hint">执行人</string>
+    <string name="task_cycle_done_hint">完成周期(天)</string>
+    <string name="task_cycle_oneday_hint">1天</string>
+    <string name="task_acceptance_hint">验收标准</string>
+    <string name="task_copied_hint">抄送给</string>
+    <string name="task_folder_max_hint">附件(最多3个)</string>
+    <string name="task_customer_hint">关联客户</string>
+    <string name="task_target_hint">关联目标</string>
+    <string name="task_target_empty_hint">无</string>
+    <string name="task_task_hint">相关任务</string>
+    <string name="task_more_hint">更多</string>
+    <string name="task_less_hint">收起</string>
+    <string name="task_filter_default_hint">执行中</string>
+    <string name="task_filter_default_hint_2">验收中</string>
+    <string name="task_filter_default_hint_2_1">待验收</string>
+    <string name="task_filter_default_hint_3">待评价</string>
+    <string name="task_filter_default_hint_4">已评价</string>
+    <string name="task_zhuanfa_hint">转发任务</string>
+    <string name="task_zhuanfa_success_hint">任务已转发!</string>
+    <string name="task_bianji_hint">编辑任务</string>
+    <string name="task_bianji_success_hint">任务已修改!</string>
+    <string name="task_quxiao_hint">取消任务</string>
+    <string name="task_search_hint">搜索任务关键字</string>
+    <string name="task_tab_zhixing">执行</string>
+    <string name="task_tab_faqi">发起</string>
+    <string name="task_tab_guanzhu">关注</string>
+    <string name="task_tab_chaosong">抄送</string>
+    <string name="task_copy_selected_title_hint">选择抄送人</string>
+    <string name="task_executor_selected_title_hint">选择汇报人</string>
+    <string name="task_cycle_done_one_hint">1天</string>
+    <string name="task_cycle_done_three_hint">3天</string>
+    <string name="task_cycle_done_seven_hint">7天</string>
+    <string name="task_cycle_done_start_hint">开始时间</string>
+    <string name="task_cycle_done_end_hint">结束时间</string>
+    <string name="task_execution_selected_title_hint">选择执行人</string>
+    <string name="medal_person_selected_title_hint">选择获奖人</string>
+    <string name="task_modify_title_hint">编辑任务</string>
+    <string name="task_target_selected_title_hint">选择关联目标</string>
+    <string name="member_medal_title_hint">获得勋章</string>
+    <string name="task_cycle_selected_title_hint">完成周期</string>
+    <string name="task_target_search_hint">搜索目标</string>
+    <string name="task_info_title_hint">任务详情</string>
+    <string name="task_task_selected_title_hint">选择关联任务</string>
+    <!-- 任务反馈 -->
+    <string name="taskprocess_zuai_hint">遇到问题</string>
+    <string name="taskprocess_yanqi_hint">需要延期</string>
+    <string name="taskprocess_order_hint">顺利进行</string>
+    <string name="taskprocess_fire_hint">抓紧处理</string>
+    <string name="taskprocess_acceptance_hint">验收通过</string>
+    <string name="taskprocess_rework_hint">需要返工</string>
+    <string name="taskprocess_good_hint">是</string>
+    <string name="taskprocess_bad_hint">否</string>
+    <string name="taskprocess_progress_hint">进度如何</string>
+    <string name="taskprocess_call_hint">致电</string>
+    <string name="taskprocess_image_hint">添加照片</string>
+    <string name="taskprocess_seekbar_hint">0%</string>
+    <string name="taskprocess_title_hint">任务反馈</string>
+    <string name="taskprocess_send_hint">立即反馈...</string>
+    <string name="taskprocess_comment_title_hint">评价</string>
+    <string name="taskprocess_comment_chaping_hint">差评</string>
+    <string name="taskprocess_comment_haoping_hint">好评</string>
+    <string name="taskprocess_comment_hint">反馈</string>
+    <!-- 附件 -->
+    <string name="attachement_look_title_hint">附件查看</string>
+    <string name="attachement_download_hint">下载</string>
+    <!-- 激励认可 -->
+    <string name="incentive_title_hint">激励认可</string>
+    <string name="medal_send">颁发勋章</string>
+    <!-- 全体成员 -->
+    <string name="invitation_hint">邀请</string>
+    <string name="member_info_title_hint">成员信息</string>
+    <!-- 我的消息 -->
+    <string name="message_title_hint">我的消息</string>
+    <!-- 团队公告 -->
+    <string name="notice_title_hint">团队公告</string>
+    <string name="notice_info_title_hint">公告详情</string>
+    <string name="notice_search_hint">搜索公告</string>
+    <string name="message_search_hint">搜索关键字</string>
+
+    <!-- 我的伙伴 -->
+    <string name="task_add_hint">任务</string>
+    <!-- 战略目标 -->
+    <string name="strategic_search_hint">搜索目标</string>
+    <string name="strategic_cycle_done_hint">完成日期</string>
+    <string name="strategic_info_title_hint">目标详情</string>
+    <string name="strategic_done_hint">落实目标</string>
+    <string name="target_title_hint">目标标题</string>
+    <string name="target_content_hint">目标描述</string>
+    <string name="target_time_hint">目标周期</string>
+    <string name="target_get_hint">达成标准</string>
+    <string name="target_amount_hint">责任人:0</string>
+    <string name="target_danger_hint">存在危险任务</string>
+    <string name="target_done_hint">达成</string>
+    <string name="target_cancel_hint">取消</string>
+    <string name="target_luoshi_hint">落实</string>
+    <string name="target_done_btn">完成目标</string>
+    <string name="target_cancel_btn">取消目标</string>
+    <!-- 设置 -->
+    <string name="settings_change_pwd_hint">修改密码</string>
+    <string name="settings_clear_cache_hint">清除缓存</string>
+    <string name="settings_clear_cache_success_hint">清除成功</string>
+    <string name="settings_change_phone_hint">修改手机号</string>
+    <string name="change_pwd_hint">输入新密码</string>
+    <string name="settings_term_hint">团队设置</string>
+    <string name="settings_buy_hint">购买宝石</string>
+    <string name="settings_push_hint">推送通知</string>
+    <string name="settings_sms_push_hint">短信通知</string>
+    <string name="settings_version_hint">版本更新</string>
+    <string name="settings_about_hint">关于快执行</string>
+    <string name="settings_logout_hint">退出登录</string>
+    <string name="taskprocess_yudaowenti">遇到问题</string>
+    <string name="taskprocess_yanqi">需要延期</string>
+    <string name="taskprocess_shunli">顺利进行</string>
+    <string name="taskprocess_zhuajin">抓紧处理</string>
+    <string name="taskprocess_jindu">进度如何</string>
+    <string name="taskprocess_flag">已关注</string>
+    <string name="taskprocess_cancel">已取消</string>
+
+</resources>

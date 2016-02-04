@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actionBtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp" >
+
+    <com.android.yijiang.kzx.widget.imageview.CircleImageView
+        android:id="@+id/user_bg"
+        android:layout_width="@dimen/user_cover_middle_height"
+        android:layout_height="@dimen/user_cover_middle_height"
+        android:layout_alignBottom="@+id/user_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_avatar_120" />
+
+    <RelativeLayout
+        android:id="@+id/user_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/user_bg"
+        android:background="@drawable/bg_message_left" >
+
+        <RelativeLayout
+            android:id="@+id/topContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/theme_normal" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/messageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topContent"
+            android:gravity="left|center"
+            android:paddingLeft="8dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444444" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/messageTv"
+            android:layout_marginTop="5dp"
+            android:gravity="left|center"
+            android:paddingLeft="8dp" >
+
+            <ImageView
+                android:id="@+id/stateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/state_bg" />
+
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:alpha="0.6"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#777777" />
+
+            <Button
+                android:id="@+id/btnAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_blue_send"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="@string/accept_invite"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

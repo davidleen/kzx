@@ -1,0 +1,238 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/publicActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar_bg_settings"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true" >
+
+            <ImageButton
+                android:id="@+id/btn_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/actionbar_selector"
+                android:padding="8dp"
+                android:src="@drawable/blue_comm_btn_top_menu" />
+
+            <ImageView
+                android:id="@+id/stateTv"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right|top"
+                android:layout_margin="6dp"
+                android:src="@drawable/state_bg"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/currentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/drawer_settings_hint"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center"
+            android:orientation="vertical"
+            android:padding="16dp" >
+
+            <TextView
+                android:id="@+id/changePwdBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_card"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/icn_events_arrow_right"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="@string/settings_change_pwd_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#777" />
+
+            <TextView
+                android:id="@+id/termBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_card"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/icn_events_arrow_right"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="@string/settings_term_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#777" />
+
+            <LinearLayout
+                android:id="@+id/versionBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_card"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="@string/settings_version_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#777" />
+
+                <TextView
+                    android:id="@+id/versionTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#444444" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icn_events_arrow_right" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/clearCacheBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_card"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/icn_events_arrow_right"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="@string/settings_clear_cache_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#777" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_card"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="@string/settings_push_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#777" />
+
+                <CheckBox
+                    android:id="@+id/noticeSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/checkbox_style"
+                    android:button="@null"
+                    android:checked="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_card"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="@string/settings_sms_push_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#777" />
+
+                <CheckBox
+                    android:id="@+id/smsSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/checkbox_style"
+                    android:button="@null"
+                    android:checked="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/aboutBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_card"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/icn_events_arrow_right"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="@string/settings_about_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#777" />
+
+            <Button
+                android:id="@+id/logoutBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_red"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/settings_logout_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

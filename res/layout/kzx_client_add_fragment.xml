@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_shadow"
+        android:orientation="vertical" >
+
+        <AutoCompleteTextView
+            android:id="@+id/phoneTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_selector"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="6dp"
+            android:ems="1"
+            android:gravity="left|center"
+            android:hint="@string/client_input_phone_hint"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444" >
+        </AutoCompleteTextView>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#e2e2e2" />
+
+        <AutoCompleteTextView
+            android:id="@+id/nameTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_selector"
+            android:drawableLeft="@drawable/ic_pay_count"
+            android:drawablePadding="6dp"
+            android:gravity="left|center"
+            android:hint="@string/client_input_name_hint"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444" >
+        </AutoCompleteTextView>
+    </LinearLayout>
+
+</RelativeLayout>

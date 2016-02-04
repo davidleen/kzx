@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/publicActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar_bg_member"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true" >
+
+            <ImageButton
+                android:id="@+id/btn_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/actionbar_selector"
+                android:padding="8dp"
+                android:src="@drawable/blue_comm_btn_top_menu" />
+
+            <ImageView
+                android:id="@+id/stateTv"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right|top"
+                android:layout_margin="6dp"
+                android:src="@drawable/state_bg"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/currentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/drawer_member_hint"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/btn_add_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/actionbar_selector"
+            android:drawableLeft="@drawable/blue_comm_btn_top_add"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/invitation_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="6dp" >
+
+            <GridView
+                android:id="@+id/dateCustomGrid"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:horizontalSpacing="6dp"
+                android:listSelector="@drawable/grid_selector2"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                android:smoothScrollbar="true"
+                android:verticalSpacing="6dp" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include layout="@layout/kzx_lv_default_fragment" />
+
+        <ProgressBar
+            android:id="@+id/footer_load_view"
+            style="@android:style/Widget.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:indeterminateDrawable="@drawable/footer_loading"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

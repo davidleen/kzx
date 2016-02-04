@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/message_box_title"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#444" />
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/grid_selector"
+                android:padding="12dp"
+                android:src="@drawable/btn_tag" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/bottomDivider"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd" />
+
+        <ListView
+            android:id="@+id/dateCustomList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:choiceMode="singleChoice"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="#f3f3f3"
+            android:dividerHeight="1dp"
+            android:drawSelectorOnTop="false"
+            android:fadingEdge="none"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@drawable/grid_selector"
+            android:scrollbars="none"
+            android:scrollingCache="false"
+            android:smoothScrollbar="true" />
+    </LinearLayout>
+
+</FrameLayout>

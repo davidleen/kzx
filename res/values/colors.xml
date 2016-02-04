@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <color name="color_black">#000000</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_gray_light">#99C9C9C9</color>
+    <color name="color_black_light">#99000000</color>
+ 	<color name="theme">#008aff</color>
+ 	<color name="theme_normal">#444444</color>
+ 	<color name="search_normal">#489eff</color>
+ 	<color name="search_pressed">#193d94</color>
+ 	<color name="tab_normal">#44FFFFFF</color>
+ 	<color name="member_tab_normal">#66444444</color>
+ 	<color name="cycle_selected">#193d94</color>
+ 	<color name="task_selected">#fd2e1f</color>
+ 	<color name="send_pressed">#1dd66b</color>
+ 	<color name="medal_selected">#fffcc4</color>
+ 	<color name="medal_normal">#9b9b9b</color>
+ 	<color name="state_selected">#459900</color>
+ 	<color name="state_unselected">#c4c4c4</color>
+ 	<color name="theme_partner_normal">#8464c3</color>
+    <color name="action_bar_bg">#3e9dff</color>
+    <color name="action_bar_bg_orange">#FF6600</color>
+    <color name="action_bottom_bar_bg">#4CFFFFFF</color>
+    <color name="action_bottom_selected_bar_bg">#e5e5e5</color>
+    <color name="action_bar_bg_pressed">#003266</color>
+    <color name="action_bar_bg_pressed_orange">#ad4500</color>
+    <color name="action_bar_divider_bg">#1e8dff</color>
+    <color name="action_bar_divider_bg_orange">#cc5100</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="white">#ffffff</color>
+    <color name="transport">#00000000</color>
+    <color name="bg">#e6edf3</color>
+    <color name="galy">#ff333333</color>
+    <color name="action_bar_search_bg">#4C000000</color>
+    <color name="dept_normal">#7c7c7c</color>
+    <color name="pull_pre_color">#B2FFFFFF</color>
+    <color name="pull_bg_color">#393336</color>
+    <color name="card_shadow_grey">#cccccc</color>
+    <color name="card_disabled">#dddddd</color>
+    <color name="holo_blue">#33b5e5</color>
+    <color name="holo_green">#dddddd</color>
+    <color name="holo_dark_green">#c4c4c4</color>
+    <color name="holo_red">#FF4444</color>
+    <color name="holo_dark_red">#CC0000</color>
+    <color name="text_view_grey">#888888</color>
+    <color name="default_progress_bar_color">#FF33B5E5</color>
+    <color name="btn_enable">#aaaaaa</color>
+    <color name="black">#000000</color>
+    <color name="btntextcolor">#ff1E90FF</color>
+    <integer-array name="colors">
+        <item>@color/holo_blue_dark</item>
+        <item>@color/holo_yellow_dark</item>
+        <item>@color/holo_green_dark</item>
+        <item>@color/holo_purple_dark</item>
+        <item>@color/holo_red_dark</item>
+    </integer-array>
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#427fed</color>
+    <color name="gplus_color_3">#b23424</color>
+    <color name="gplus_color_4">#f4b400</color>
+    <color name="holo_blue_dark">#0099cc</color>
+    <color name="holo_yellow_dark">#ff8800</color>
+    <color name="holo_green_dark">#669900</color>
+    <color name="holo_purple_dark">#9933cc</color>
+    <color name="holo_red_dark">#cc0000</color>
+    <color name="grey_black">#7c849b</color>
+    <color name="main_color">#444c63</color>
+    <color name="bg_pressed">#f3f3f3</color>
+    <color name="bg_color">#efefef</color>
+    <color name="statusbar_bg">#00abee</color>
+    <color name="statusbar_pressed_bg">#008EC6</color>
+    <color name="statusbar_pressed_bg2">#00719e</color>
+    <color name="station_textcolor">#008aff</color>
+    <color name="station_divider_textcolor">#dddddd</color>
+    <color name="station_divider_title_textcolor">#777</color>
+    <color name="statusbar_transport_bg">#D800ABEE</color>
+    <color name="description_bg">#7F545454</color>
+    <color name="drawer_normal">#42393e</color>
+    <color name="drawer_selected">#f66f17</color>
+    <color name="note_normal">#898989</color>
+    <color name="note_selected">#ce352c</color>
+    <color name="clouds">#eaeceb</color>
+    <color name="default_clouds_bg">#efefef</color>
+    <color name="clouds_other">#ffffff</color>
+    <color name="statusbar1_bg">#4285f4</color>
+    <color name="statusbar2_bg">#f4b400</color>
+    <color name="statusbar3_bg">#dd4330</color>
+    <color name="statusbar4_bg">#0f9d58</color>
+  	<color name="progress_mask_0">#4285f4</color>
+  	<color name="progress_mask_1">#f4b400</color>
+  	<color name="progress_mask_2">#dd4330</color>
+  	<color name="progress_mask_3">#0f9d58</color>
+  	<color name="default_text_color_holo_dark">#ffffffff</color>
+    <color name="default_text_color_holo_dark_disabled">#ff4c4c4c</color>
+    <color name="default_divider_color_dark">#28ffffff</color>
+    <color name="default_button_background_dark">#00000000</color>
+    <color name="default_button_background_pressed_dark">#46c5c1ff</color>
+    <color name="default_keyboard_indicator_color_dark">#ff33b5e5</color>
+
+    <color name="default_text_color_holo_light">#ff000000</color>
+    <color name="default_text_color_holo_light_disabled">#ffb2b2b2</color>
+    <color name="default_divider_color_light">#28000000</color>
+    <color name="default_button_background_light">#00000000</color>
+    <color name="default_button_background_pressed_light">#ff00ddff</color>
+    <color name="default_keyboard_indicator_color_light">#ff00ddff</color>
+
+    <color name="circle_background">#f2f2f2</color>
+    <color name="line_background">#cccccc</color>
+    <color name="ampm_text_color">#8c8c8c</color>
+    <color name="done_text_color_normal">#333333</color>
+    <color name="done_text_color_disabled">#CCCCCC</color>
+    <color name="numbers_text_color">#8c8c8c</color>
+
+    <color name="transparent_black">#7F000000</color>
+    <color name="blue">#33b5e5</color>
+    <color name="darker_blue">#0099CC</color>
+    <color name="date_picker_text_normal">#FF999999</color>
+
+    <color name="calendar_header">#999999</color>
+    <color name="date_picker_view_animator">#f2f2f2</color>
+    <color name="calendar_selected_date_text">#FFD1D2D4</color>
+</resources>

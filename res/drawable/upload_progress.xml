@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 背景 -->
+    <item
+        android:id="@android:id/background" >
+         <nine-patch android:src="@drawable/drawable_loading"></nine-patch>
+    </item>
+    <!-- 第二进度条 -->
+    <item
+        android:id="@android:id/secondaryProgress" >
+        <nine-patch android:src="@drawable/drawable_loading"></nine-patch>
+    </item>
+    <!-- 第一进度条 -->
+    <item
+        android:id="@android:id/progress" >
+        <clip android:drawable="@drawable/drawable_loading_progress"/>
+    </item>
+</layer-list>

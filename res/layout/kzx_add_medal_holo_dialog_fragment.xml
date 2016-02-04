@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/d_bg" >
+
+        <ImageView
+            android:id="@+id/medalIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop" />
+
+        <EditText
+            android:id="@+id/titleEt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/medalIcon"
+            android:layout_margin="10dp"
+            android:background="@drawable/abs__textfield_searchview_holo_light"
+            android:drawableLeft="@drawable/ic_kzx_add_medal_title"
+            android:drawablePadding="5dp"
+            android:gravity="left|center"
+            android:hint="@string/input_medal_title_hint"
+            android:paddingBottom="8dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444" >
+
+            <requestFocus />
+        </EditText>
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleEt"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="10dp" >
+
+            <EditText
+                android:id="@+id/contentEt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/abs__textfield_searchview_holo_light"
+                android:drawableLeft="@drawable/ic_kzx_add_medal_write"
+                android:drawablePadding="5dp"
+                android:gravity="left|center"
+                android:hint="@string/input_medal_reason_hint"
+                android:paddingBottom="8dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingTop="8dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#444" >
+            </EditText>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/btnSureDivider"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/content"
+            android:background="#efefef" />
+
+        <TextView
+            android:id="@+id/btnSure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSureDivider"
+            android:gravity="center"
+            android:background="@drawable/grid_selector2"
+            android:padding="12dp"
+            android:text="@string/medal_done_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444444" />
+    </RelativeLayout>
+
+</RelativeLayout>

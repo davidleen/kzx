@@ -1,0 +1,540 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg" >
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar_bg_task" >
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_selector"
+            android:padding="12dp"
+            android:src="@drawable/nav_arrow_back" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/grid_selector"
+            android:gravity="center"
+            android:text="@string/task_modify_title_hint"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_selector"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/ok"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionBar" >
+
+        <com.android.yijiang.kzx.widget.StickyScrollView
+            android:id="@+id/contentScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/topContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="top|center"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/titleIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/titleCt"
+                            android:src="@drawable/kzx_ic_add_task_book" />
+
+                        <com.android.yijiang.kzx.widget.FloatLabeledEditText
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/titleCt"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@+id/titleIv"
+                            android:hint="@string/task_title_hint"
+                            app:fletFloatingHint="@string/task_title_hint"
+                            app:fletHintTextColor="#444444"
+                            app:fletImeOptions="actionDone"
+                            app:fletTextGravity="left|center" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/line" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/contentIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/contentCt"
+                            android:src="@drawable/kzx_ic_add_task_list" />
+
+                        <com.android.yijiang.kzx.widget.FloatLabeledEditText
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/contentCt"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@+id/contentIv"
+                            android:hint="@string/task_explain_hint"
+                            app:fletFloatingHint="@string/task_explain_hint"
+                            app:fletHintTextColor="#444444"
+                            app:fletImeOptions="actionDone"
+                            app:fletTextGravity="left|center" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/line" />
+
+                    <TextView
+                        android:id="@+id/executionTv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grid_selector"
+                        android:drawableLeft="@drawable/kzx_ic_add_task_user"
+                        android:drawablePadding="8dp"
+                        android:drawableRight="@drawable/icn_events_arrow_right"
+                        android:ellipsize="end"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/theme_normal" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/line" />
+
+                    <LinearLayout
+                        android:id="@+id/cycleDoneBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:orientation="horizontal"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/taskTimeIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/kzx_ic_add_task_time" />
+
+                        <TextView
+                            android:id="@+id/taskTimeTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/theme_normal" />
+
+                        <TextView
+                            android:id="@+id/taskDayTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#fd2e1f" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:background="@drawable/icn_events_arrow_right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/middleContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/topContent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/card_shadow_base"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/expandable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|center"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" >
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/grid_selector"
+                                android:drawableLeft="@drawable/kzx_ic_add_task_chart"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center"
+                                android:padding="10dp"
+                                android:text="@string/task_acceptance_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/theme_normal"
+                                android:textColorHint="@color/station_divider_title_textcolor" />
+
+                            <ImageButton
+                                android:id="@+id/addNewAcceptanceBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:padding="8dp"
+                                android:src="@drawable/kzx_add_action" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/acceptanceCustomList"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="40dp" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/line" />
+
+                        <LinearLayout
+                            android:id="@+id/copySelectedBtn"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/grid_selector"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            android:padding="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/kzx_ic_add_task_user_other"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center"
+                                android:text="@string/task_copied_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/theme_normal"
+                                android:textColorHint="@color/station_divider_title_textcolor" />
+
+                            <TextView
+                                android:id="@+id/copySelectedTag"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:paddingRight="6dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#3777d6" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/icn_events_arrow_right" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/line" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/kzx_ic_add_task_attachment"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center"
+                                android:padding="10dp"
+                                android:text="@string/task_folder_max_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/theme_normal" />
+
+                            <TextView
+                                android:id="@+id/attachmentTv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:layout_weight="1"
+                                android:gravity="left|center"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#0079ff"
+                                android:visibility="invisible" />
+
+                            <ImageButton
+                                android:id="@+id/cameraBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_camera" />
+
+                            <ImageButton
+                                android:id="@+id/galleryBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:background="@null"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_gallery" />
+                        </LinearLayout>
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:fadingEdge="none"
+                            android:fillViewport="true"
+                            android:scrollbars="none" >
+
+                            <LinearLayout
+                                android:id="@+id/attachmentCustomList2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="40dp" />
+                        </HorizontalScrollView>
+
+                        <LinearLayout
+                            android:id="@+id/attachmentCustomList"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="40dp" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/line" />
+
+                        <LinearLayout
+                            android:id="@+id/targetBtn"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/grid_selector"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            android:padding="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/kzx_ic_add_task_statistics"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center"
+                                android:text="@string/task_target_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/theme_normal"
+                                android:textColorHint="@color/station_divider_title_textcolor" />
+
+                            <TextView
+                                android:id="@+id/targetTag"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:paddingRight="6dp"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#3777d6" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/icn_events_arrow_right" />
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/line" />
+
+                        <LinearLayout
+                            android:id="@+id/taskBtn"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/grid_selector"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            android:padding="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/kzx_ic_add_task_pin"
+                                android:drawablePadding="8dp"
+                                android:gravity="left|center"
+                                android:text="@string/task_task_hint"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/theme_normal"
+                                android:textColorHint="@color/station_divider_title_textcolor" />
+
+                            <TextView
+                                android:id="@+id/taskSelectedTag"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:paddingRight="6dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#3777d6" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/icn_events_arrow_right" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/taskCustomList"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="40dp" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/line" />
+
+                        <LinearLayout
+                            android:id="@+id/clientBtn"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/grid_selector"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/clientNameTv"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/kzx_ic_add_task_people"
+                                android:drawablePadding="8dp"
+                                android:drawableRight="@drawable/icn_events_arrow_right"
+                                android:gravity="left|center"
+                                android:padding="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/theme_normal" />
+
+                            <TextView
+                                android:id="@+id/clientPhoneTv"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:paddingBottom="15dp"
+                                android:paddingLeft="42dp"
+                                android:paddingRight="5dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/station_divider_title_textcolor" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/header"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/headerIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_more_arrow_down" />
+
+                        <TextView
+                            android:id="@+id/headerTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:gravity="left|center"
+                            android:hint="@string/task_more_hint"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#999999" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.android.yijiang.kzx.widget.StickyScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

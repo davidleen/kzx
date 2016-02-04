@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="8dp" >
+
+    <com.android.yijiang.kzx.widget.imageview.CircleImageView
+        android:id="@+id/company_bg"
+        android:layout_width="@dimen/user_cover_middle_width"
+        android:layout_height="@dimen/user_cover_middle_height"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_bg" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/stateTv"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/state_bg" />
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/theme_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/taskTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/station_divider_title_textcolor" />
+
+            <TextView
+                android:id="@+id/commentTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/station_divider_title_textcolor" />
+
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_time_grey_12"
+                android:drawablePadding="6dp"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#777" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

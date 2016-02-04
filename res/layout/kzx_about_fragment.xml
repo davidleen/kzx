@@ -1,0 +1,197 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/welcome_luncher_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kzx_ic_login_title_drawer" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#dddddd" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/kzx_ic_login_title" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#dddddd" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/kzx_settings_bg"
+            android:gravity="left|center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/telBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_selector"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="@string/about_tel_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#333" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/grid_selector"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="@string/about_tel_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#777" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#dddddd" />
+
+            <LinearLayout
+                android:id="@+id/emailBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_selector"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="@string/about_email_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#333" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/grid_selector"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="@string/about_email_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#777" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#dddddd" />
+
+            <LinearLayout
+                android:id="@+id/websiteBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_selector"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="@string/about_website_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#333" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/grid_selector"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="@string/about_website_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#777" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#dddddd" />
+
+            <LinearLayout
+                android:id="@+id/wechatBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_selector"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="6dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="@string/about_wechat_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#333" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon64_wx_logo" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

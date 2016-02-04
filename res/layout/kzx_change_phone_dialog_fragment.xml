@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="left|center"
+        android:paddingBottom="22dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="22dp" >
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="left|center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/settings_change_phone_hint"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#444444" />
+
+            <ImageButton
+                android:id="@+id/closeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_tag" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar"
+        android:background="#CFFFFFFF"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/phoneTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#444444" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/codeTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_card"
+                    android:gravity="left|center"
+                    android:hint="@string/input_code_hint"
+                    android:padding="8dp"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#444" />
+
+                <Button
+                    android:id="@+id/btnCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/btn_white"
+                    android:gravity="center"
+                    android:padding="9dp"
+                    android:text="@string/get_code_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#444444"
+                    android:textColorHint="#777" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_red"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/alert_dialog_ok"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:background="@drawable/search_shadow" />
+
+</RelativeLayout>

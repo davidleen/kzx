@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg" >
+
+    <RelativeLayout
+        android:id="@+id/publicActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar_bg_incentive"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_selector"
+            android:padding="12dp"
+            android:src="@drawable/nav_arrow_back" />
+
+        <TextView
+            android:id="@+id/currentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/strategic_info_title_hint"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/actionbar_selector"
+            android:padding="12dp"
+            android:src="@drawable/nav_more" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/doneTargetSwitch"
+        android:layout_below="@+id/publicActionBar" >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ListView
+                android:id="@+id/dateCustomList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:choiceMode="singleChoice"
+                android:descendantFocusability="beforeDescendants"
+                android:divider="#f3f3f3"
+                android:dividerHeight="1dp"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:listSelector="#00000000"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                android:smoothScrollbar="true" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/doneTargetSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/grid_selector2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kzx_done_target" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:paddingTop="2dp"
+            android:text="@string/strategic_done_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#777" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bottomDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/doneTargetSwitch"
+        android:background="@drawable/search_shadow_up" />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="left|center"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingRight="4dp"
+    android:paddingTop="8dp" >
+
+    <TextView
+        android:id="@+id/acceptanceTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="left|center"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#7c7c7c" />
+
+    <ImageButton
+        android:id="@+id/clearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:background="@null"
+        android:src="@drawable/btn_clear"
+        android:tint="#fd2e1f" />
+
+</LinearLayout>

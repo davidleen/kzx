@@ -1,0 +1,164 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/leftLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:background="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nearby_indicator_small" />
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:id="@+id/endTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#777" />
+
+        <LinearLayout
+            android:id="@+id/actionBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="6dp"
+            android:gravity="left|center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_card_left"
+                android:gravity="left|center"
+                android:orientation="vertical"
+                android:padding="8dp" >
+
+                <TextView
+                    android:id="@+id/titleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:maxLines="2"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#444" />
+
+                <TextView
+                    android:id="@+id/taskTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_verified_grey_16"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#7F444444"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/dangerTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:drawableLeft="@drawable/ic_kzx_target_alert"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:text="@string/target_danger_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#777" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#dddddd"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/doneTargetBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/btn_card_right"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:id="@+id/DoneTargetSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/kzx_done_target"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:text="@string/target_luoshi_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#777"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/DoneOkSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/kzx_done_ok"
+                    android:gravity="center"
+                    android:text="@string/target_done_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#6bde6e"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/DoneCancelSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/kzx_done_cancel"
+                    android:gravity="center"
+                    android:text="@string/target_cancel_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#777777"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

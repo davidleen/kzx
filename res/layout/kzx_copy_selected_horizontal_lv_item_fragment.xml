@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.yijiang.kzx"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="left|center"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:paddingTop="8dp" >
+
+    <TextView
+        android:id="@+id/selectedTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/g_frame_bg"
+        android:drawablePadding="6dp"
+        android:drawableRight="@drawable/g_download_progress"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#777777" />
+
+</LinearLayout>

@@ -1,0 +1,182 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8d8d8"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/kzx_login_cover_bg"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/welcome_luncher_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kzx_ic_login_title_drawer" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kzx_ic_login_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/kzx_login_edit_bg"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/userTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableLeft="@drawable/wl_login_username_glyph"
+                android:drawablePadding="5dp"
+                android:gravity="left|center"
+                android:hint="@string/input_username_hint"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#444"
+                android:textColorHint="#777" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#dddddd" />
+
+            <EditText
+                android:id="@+id/pwdTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableLeft="@drawable/wl_login_password_glyph"
+                android:drawablePadding="5dp"
+                android:gravity="left|center"
+                android:hint="@string/input_password_hint"
+                android:imeOptions="actionDone"
+                android:padding="10dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#444"
+                android:textColorHint="#777" />
+
+            <ImageView
+                android:id="@+id/codeDivider"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#dddddd"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/codeLinear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/codeTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/wl_login_password_glyph"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center"
+                    android:hint="@string/input_codes_hint"
+                    android:imeOptions="actionDone"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#444"
+                    android:textColorHint="#777" />
+
+                <ImageView
+                    android:id="@+id/codeIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_login"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/login_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/no_register_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="@string/noregister_login_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#777" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:alpha="0.8"
+                android:background="#777" />
+
+            <TextView
+                android:id="@+id/forgetPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="@string/forget_pwd_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#777" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="8dp"
+        android:background="@drawable/ic_kzx_login_bottom_title" />
+
+</FrameLayout>

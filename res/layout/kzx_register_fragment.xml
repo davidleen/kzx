@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg" >
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar_bg_task" >
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_selector"
+            android:padding="12dp"
+            android:src="@drawable/nav_arrow_back" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/register_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionBar"
+        android:gravity="top|center"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+        <EditText
+            android:id="@+id/phoneTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_card"
+            android:drawableLeft="@drawable/kzx_ic_login_phone"
+            android:drawablePadding="5dp"
+            android:gravity="left|center"
+            android:hint="@string/input_phone_hint"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444444"
+            android:textColorHint="#777" />
+
+        <LinearLayout
+            android:id="@+id/codeLinear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/phoneCodeTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_card"
+                android:drawableLeft="@drawable/kzx_ic_login_code"
+                android:drawablePadding="5dp"
+                android:gravity="left|center"
+                android:hint="@string/input_code_hint"
+                android:inputType="number"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#444444"
+                android:textColorHint="#777" />
+
+            <Button
+                android:id="@+id/btnCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/btn_white"
+                android:gravity="center"
+                android:padding="9dp"
+                android:text="@string/get_code_hint"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#444444"
+                android:textColorHint="#777" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/passwordLinear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/newPwdTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_card"
+                android:drawableLeft="@drawable/kzx_ic_login_pwd"
+                android:drawablePadding="5dp"
+                android:gravity="left|center"
+                android:hint="@string/input_newpwd_hint"
+                android:padding="10dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#444444"
+                android:textColorHint="#777" />
+
+            <EditText
+                android:id="@+id/reNewPwdTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_card"
+                android:drawableLeft="@drawable/kzx_ic_login_pwd"
+                android:drawablePadding="5dp"
+                android:gravity="left|center"
+                android:hint="@string/input_renewpwd_hint"
+                android:padding="10dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#444444"
+                android:textColorHint="#777" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_login"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/ok"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

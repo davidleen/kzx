@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/titleEt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_kzx_add_medal_title"
+            android:drawablePadding="5dp"
+            android:gravity="left|center"
+            android:hint="@string/input_medal_title_hint"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444"
+            android:textColorHint="#777" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd" />
+
+        <EditText
+            android:id="@+id/contentEt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_kzx_add_medal_write"
+            android:drawablePadding="5dp"
+            android:gravity="left|center"
+            android:hint="@string/input_medal_reason_hint"
+            android:imeOptions="actionSend"
+            android:padding="8dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#444"
+            android:textColorHint="#777" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd" />
+
+        <Button
+            android:id="@+id/writeBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_login"
+            android:gravity="center"
+            android:imeOptions="actionSend"
+            android:padding="8dp"
+            android:text="@string/medal_done_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_shadow" />
+
+</LinearLayout>

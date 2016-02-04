@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:gravity="top|center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar_bg_task" >
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_selector"
+            android:padding="12dp"
+            android:src="@drawable/nav_arrow_back" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/grid_selector"
+            android:gravity="center"
+            android:text="@string/create_team_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        android:background="@drawable/app_msg_bg"
+        android:gravity="left|center"
+        android:padding="12dp"
+        android:text="@string/team_tip_title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#444444" />
+
+    <EditText
+        android:id="@+id/teamTv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/btn_card"
+        android:drawableLeft="@drawable/ic_button_edit"
+        android:drawablePadding="5dp"
+        android:gravity="left|center"
+        android:hint="@string/input_team_hint"
+        android:padding="10dp"
+        android:text="@string/default_my_team"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#444444"
+        android:textColorHint="#777" />
+
+    <Button
+        android:id="@+id/btnSure"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_login"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/ok"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+</LinearLayout>

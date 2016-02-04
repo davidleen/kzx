@@ -1,0 +1,303 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd" />
+
+    <LinearLayout
+        android:id="@+id/bottomMoreAction"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/executeRadio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <CheckBox
+                    android:id="@+id/zuaiBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_taskprocess_style"
+                    android:button="@null"
+                    android:drawableTop="@drawable/kzx_ic_task_zuai_action"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/taskprocess_zuai_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/station_divider_title_textcolor" />
+
+                <CheckBox
+                    android:id="@+id/yanqiBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_taskprocess_style"
+                    android:button="@null"
+                    android:drawableTop="@drawable/kzx_ic_task_more_action"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/taskprocess_yanqi_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/station_divider_title_textcolor" />
+
+                <CheckBox
+                    android:id="@+id/orderBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_taskprocess_style"
+                    android:button="@null"
+                    android:drawableTop="@drawable/kzx_ic_task_ok_action"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/taskprocess_order_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/station_divider_title_textcolor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sponsorRadio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <CheckBox
+                    android:id="@+id/fireBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_taskprocess_style"
+                    android:button="@null"
+                    android:drawableTop="@drawable/kzx_ic_task_fire_action"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/taskprocess_fire_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/station_divider_title_textcolor" />
+
+                <CheckBox
+                    android:id="@+id/progressBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_taskprocess_style"
+                    android:button="@null"
+                    android:drawableTop="@drawable/kzx_ic_task_more_action"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/taskprocess_progress_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/station_divider_title_textcolor" />
+
+                <TextView
+                    android:id="@+id/callBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/kzx_ic_task_call_action"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/taskprocess_call_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/station_divider_title_textcolor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/acceptanceRadio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <CheckBox
+                    android:id="@+id/acceptanceBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_taskprocess_style"
+                    android:button="@null"
+                    android:drawableTop="@drawable/kzx_ic_task_arrow_action"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/taskprocess_acceptance_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/station_divider_title_textcolor" />
+
+                <CheckBox
+                    android:id="@+id/reworkBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_taskprocess_style"
+                    android:button="@null"
+                    android:drawableTop="@drawable/kzx_ic_task_arrow_back_action"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/taskprocess_rework_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/station_divider_title_textcolor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/commentRadio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <CheckBox
+                    android:id="@+id/goodBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_taskprocess_style"
+                    android:button="@null"
+                    android:drawableTop="@drawable/kzx_ic_task_good_comment_action"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/taskprocess_good_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/station_divider_title_textcolor" />
+
+                <CheckBox
+                    android:id="@+id/badBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_taskprocess_style"
+                    android:button="@null"
+                    android:drawableTop="@drawable/kzx_ic_task_bad_comment_action"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/taskprocess_bad_hint"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/station_divider_title_textcolor" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd" />
+
+        <RelativeLayout
+            android:id="@+id/seekBarLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/seekBarTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:background="@drawable/ic_kzx_seekbar_popwindow_bg"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/taskprocess_seekbar_hint"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/hintTv"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seekBarTv"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#777777"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seekBarTv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/seekBarStateTv"
+                android:layout_toRightOf="@+id/hintTv" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_kzx_seekbar_bg" />
+
+                <com.android.yijiang.kzx.widget.MySeekBar
+                    android:id="@+id/seekBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress_horizontal"
+                    android:thumb="@drawable/btn_seekbar_humb"
+                    android:thumbOffset="0dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/seekBarStateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/seekBarTv"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:minLines="3"
+                android:singleLine="true"
+                android:text="@string/seek_bar_state_1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#444444"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
