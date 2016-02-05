@@ -186,8 +186,9 @@ public class KzxAboutFragment extends Fragment {
 			case R.id.wechatBtn:
 				//shareToFriend(getString(R.string.about_wechat_website_hint));
 				//shareToTimeLine();
-				
-				sendMessageToWX();
+				 
+			//	sendMessageToWX( );
+				sendMessageToWXTimeLine();
 				break;
 			default:
 				break;
@@ -244,14 +245,14 @@ public class KzxAboutFragment extends Fragment {
 
 	
 	/**
-	 * 向微信发送网页分享
+	 * 向微信发送网页分享给朋友
 	 */
-	  private void sendMessageToWX()
+	  private void sendMessageToWX( )
 	    {
 	        WXWebpageObject webpage = new WXWebpageObject();
 	        webpage.webpageUrl = getString(R.string.about_wechat_website_hint);
 	        WXMediaMessage msg = new WXMediaMessage(webpage);
-	        msg.title = "我在使用\""+getResources().getString(R.string.app_name)+"\"";
+	        msg.title = "我们的团队正在使用\""+getResources().getString(R.string.app_name)+"\"";
 	        
 	        msg.description = messages[random.nextInt(messages.length)];
 	        Bitmap thumb = BitmapFactory.decodeResource(getResources(), R.drawable.app_icon_2);
@@ -259,11 +260,31 @@ public class KzxAboutFragment extends Fragment {
 	        SendMessageToWX.Req req = new SendMessageToWX.Req();
 	        req.transaction = buildTransaction("webpage");
 	        req.message = msg;
-	        //req.scene = SendMessageToWX.Req.WXSceneTimeline;
-	        req.scene = SendMessageToWX.Req.WXSceneSession;
+	        
+	      req.scene = SendMessageToWX.Req.WXSceneSession;
+	        
 	        weixiApi.sendReq(req);
 	    }
-	  
+	  /**
+		 * 向微信发送网页分享朋友圈
+		 */
+		  private void sendMessageToWXTimeLine()
+		    {
+		        WXWebpageObject webpage = new WXWebpageObject();
+		        webpage.webpageUrl = getString(R.string.about_wechat_website_hint);
+		        WXMediaMessage msg = new WXMediaMessage(webpage);
+		        msg.title = "我们的团队正在使用\""+getResources().getString(R.string.app_name)+"\"。\r\n  "+messages[random.nextInt(messages.length)];
+		        
+		        //msg.description = ;
+		        Bitmap thumb = BitmapFactory.decodeResource(getResources(), R.drawable.app_icon_2);
+		        msg.thumbData = bitmap2Byte(thumb);  // 设置缩略图
+		        SendMessageToWX.Req req = new SendMessageToWX.Req();
+		        req.transaction = buildTransaction("webpage");
+		        req.message = msg;
+		        req.scene = SendMessageToWX.Req.WXSceneTimeline;
+		       
+		        weixiApi.sendReq(req);
+		    }
 	  
 	  
 	  private void setImageToWx()

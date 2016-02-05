@@ -182,7 +182,7 @@
                     android:layout_weight="1"
                     android:gravity="left|center"
                     android:singleLine="true"
-                    android:text="@string/about_wechat_hint"
+                    android:text="@string/about_wechat_line"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#333" />
 

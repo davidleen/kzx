@@ -283,6 +283,7 @@
     <string name="about_website_hint">官网:</string>
     <string name="about_website_text">http://www.kuaizhixing.com</string>
     <string name="about_wechat_hint">推荐朋友使用:</string>
+    <string name="about_wechat_line">分享到朋友圈:</string>
         <string name="about_wechat_website_hint">http://a.app.qq.com/o/simple.jsp?pkgname=com.android.yijiang.kzx</string>
     <string name="please_speak">请说话</string>
     <string name="please_speak_error"> 抱歉您的系统不支持语音识别输入</string>
