@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+ 
+	<string-array name="message_list">
+		<item>3周，高效工作和快乐生活与你同行</item>
+		<item>3周， 同时享受高效工作和快乐生活</item>
+		<item>3周，让高效工作与快乐生活两不误</item> 
+		<item>3周，让工作多一点高效，生活多一点快乐</item>  
+	</string-array>
+	 
+</resources>

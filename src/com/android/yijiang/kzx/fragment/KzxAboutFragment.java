@@ -11,6 +11,7 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 
 import org.apache.http.client.HttpResponseException;
@@ -113,6 +114,9 @@ public class KzxAboutFragment extends Fragment {
 	
 	
 	 IWXAPI weixiApi;
+	 
+	 public String[] messages;
+	 public Random random;
 
 	public static KzxAboutFragment newInstance() {
 		KzxAboutFragment fragment = new KzxAboutFragment();
@@ -126,9 +130,12 @@ public class KzxAboutFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 		
 		
-		  String appId="test";
+		   String appId="wx7fd4fc5f42a07e7d";
 	        weixiApi = WXAPIFactory.createWXAPI(getActivity(),appId,true);
 	        weixiApi.registerApp(appId);
+	        
+	        messages=getResources().getStringArray(R.array.message_list);
+	        random=new Random();
 	}
 
 	 @Override
@@ -178,7 +185,9 @@ public class KzxAboutFragment extends Fragment {
 				break;
 			case R.id.wechatBtn:
 				//shareToFriend(getString(R.string.about_wechat_website_hint));
-				shareToTimeLine();
+				//shareToTimeLine();
+				
+				sendMessageToWX();
 				break;
 			default:
 				break;
@@ -242,14 +251,16 @@ public class KzxAboutFragment extends Fragment {
 	        WXWebpageObject webpage = new WXWebpageObject();
 	        webpage.webpageUrl = getString(R.string.about_wechat_website_hint);
 	        WXMediaMessage msg = new WXMediaMessage(webpage);
-	        msg.title = "我在\""+getResources().getString(R.string.app_name)+"\"捡到了大实惠";
-	        msg.description = "描述";
+	        msg.title = "我在使用\""+getResources().getString(R.string.app_name)+"\"";
+	        
+	        msg.description = messages[random.nextInt(messages.length)];
 	        Bitmap thumb = BitmapFactory.decodeResource(getResources(), R.drawable.app_icon_2);
 	        msg.thumbData = bitmap2Byte(thumb);  // 设置缩略图
 	        SendMessageToWX.Req req = new SendMessageToWX.Req();
 	        req.transaction = buildTransaction("webpage");
 	        req.message = msg;
-	        req.scene = SendMessageToWX.Req.WXSceneTimeline;
+	        //req.scene = SendMessageToWX.Req.WXSceneTimeline;
+	        req.scene = SendMessageToWX.Req.WXSceneSession;
 	        weixiApi.sendReq(req);
 	    }
 	  
@@ -290,7 +301,7 @@ public class KzxAboutFragment extends Fragment {
 
 
 	        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-	        bitmap.compress(Bitmap.CompressFormat.JPEG, 80, bos);
+	        bitmap.compress(Bitmap.CompressFormat.PNG, 100, bos);
 	       byte[] data = bos.toByteArray();
 	        try {
 	            bos.close();
