@@ -112,7 +112,7 @@ public class KzxAboutFragment extends Fragment {
 	private LinearLayout websiteBtn;
 	private LinearLayout wechatBtn;
 	
-	
+	private LinearLayout wechatFriendBtn;
 	 IWXAPI weixiApi;
 	 
 	 public String[] messages;
@@ -157,10 +157,12 @@ public class KzxAboutFragment extends Fragment {
 		emailBtn = (LinearLayout) view.findViewById(R.id.emailBtn);
 		websiteBtn = (LinearLayout) view.findViewById(R.id.websiteBtn);
 		wechatBtn = (LinearLayout) view.findViewById(R.id.wechatBtn);
+		wechatFriendBtn=(LinearLayout) view.findViewById(R.id.wechatFriendBtn);
 		telBtn.setOnClickListener(onClickListener);
 		emailBtn.setOnClickListener(onClickListener);
 		websiteBtn.setOnClickListener(onClickListener);
 		wechatBtn.setOnClickListener(onClickListener);
+		wechatFriendBtn.setOnClickListener(onClickListener);
 	}
 
 	OnClickListener onClickListener = new OnClickListener() {
@@ -189,6 +191,14 @@ public class KzxAboutFragment extends Fragment {
 				 
 			//	sendMessageToWX( );
 				sendMessageToWXTimeLine();
+				break;
+				
+			case R.id.wechatFriendBtn:
+				//shareToFriend(getString(R.string.about_wechat_website_hint));
+				//shareToTimeLine();
+				 
+			 	sendMessageToWX( );
+				//sendMessageToWXTimeLine();
 				break;
 			default:
 				break;
@@ -273,7 +283,7 @@ public class KzxAboutFragment extends Fragment {
 		        WXWebpageObject webpage = new WXWebpageObject();
 		        webpage.webpageUrl = getString(R.string.about_wechat_website_hint);
 		        WXMediaMessage msg = new WXMediaMessage(webpage);
-		        msg.title = "我们的团队正在使用\""+getResources().getString(R.string.app_name)+"\"。\r\n  "+messages[random.nextInt(messages.length)];
+		        msg.title = "我在用\""+getResources().getString(R.string.app_name)+"\"。\r\n  "+messages[random.nextInt(messages.length)];
 		        
 		        //msg.description = ;
 		        Bitmap thumb = BitmapFactory.decodeResource(getResources(), R.drawable.app_icon_2);

@@ -159,7 +159,40 @@
                     android:textColor="#777" />
             </LinearLayout>
 
-            <ImageView
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#dddddd" />
+
+            <LinearLayout
+                android:id="@+id/wechatFriendBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_selector"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="6dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:text="@string/about_wechat_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#333" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon64_wx_logo" />
+            </LinearLayout>
+            
+             <View
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="#dddddd" />
